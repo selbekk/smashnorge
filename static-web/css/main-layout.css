@@ -1,26 +1,51 @@
+/* Header */
+
 .header-wrap {
     background-color: #eee;
 }
 
-#main-header {
-
+.bg {
+    background: no-repeat center center;
 }
 
-#main-nav {
-    background-color: #313037;
-    color: white;
+.bg.bg-cover {
+    background-size: cover;
 }
 
-#main-nav ul li a {
-    color: white;
-    border-radius: 0;
+.bg.bg-panorama {
 
-    transition: all 200ms ease-in-out;
+    background-image: url(../img/content/main-panorama.jpg);
 }
 
-#main-nav ul li a:hover,
-#main-nav ul li a:focus,
-#main-nav ul li.active a {
-    color: #313037;
-    background-color: #FF6347;
-}
+
+    /* Main navigation */
+    #main-nav {
+        background-color: #313037;
+        color: white;
+    }
+
+    #main-nav ul li a {
+        color: white;
+        border-radius: 0;
+
+        transition: all 200ms ease-in-out;
+    }
+
+    #main-nav ul li a:hover,
+    #main-nav ul li a:focus,
+    #main-nav ul li.active a {
+        color: #313037;
+        background-color: #FF6347;
+    }
+
+    /* frontpage splash */
+
+    #main-header {
+        padding-top: 200px;
+
+    }
+
+    #main-header img.logo {
+        display: inline-block;
+        width: 100%;
+    }
