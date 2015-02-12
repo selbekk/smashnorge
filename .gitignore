@@ -16,3 +16,6 @@ wp-content/wp-cache-config.php
 # IntelliJ
 .idea/
 *.iml
+
+# Static web stuff
+static-web/bower_components/
