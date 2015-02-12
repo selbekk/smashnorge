@@ -17,5 +17,8 @@ wp-content/wp-cache-config.php
 .idea/
 *.iml
 
+# OS X
+.DS_Store
+
 # Static web stuff
 static-web/bower_components/
