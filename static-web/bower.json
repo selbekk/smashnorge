@@ -1,0 +1,18 @@
+{
+  "name": "smashnorge",
+  "version": "0.0.0",
+  "homepage": "https://github.com/selbekk/smashnorge",
+  "authors": [
+    "selbekk <kristofer.selbekk@bekk.no>",
+    "Nyeng <vegard.nyeng@gmail.com"
+  ],
+  "description": "Web site for Smash Norway",
+  "keywords": [
+    "Wordpress",
+    "website",
+    "html5",
+    "yolo"
+  ],
+  "license": "MIT",
+  "private": true
+}
