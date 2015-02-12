@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Smash Norge</title>
 
-    <link rel="stylesheet" href="css/main-layout.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/main-layout.css" />
 </head>
 <body>
-    <div class="fluent-container">
+    <div class="container">
         <section id="header-wrap" class="row">
             <header id="main-header">
                 <h1>Smash Norge</h1>
@@ -24,11 +25,6 @@
         </section>
         <section id="main-content" class="row">
             <article class="row cta-wrap">
-                <div class="col-md-4 cta">
-                    <div class="image-wrap">
-                        <img src="img/logo-medium.png" alt="Smash Norway's logo" />
-                    </div>
-                </div>
                 <div class="col-md-8">
                     <h1>Vi digger Melee!</h1>
                     <p class="lead">
@@ -37,18 +33,23 @@
                     </p>
                     <a href="#" class="btn btn-info">Bli med du også da vel!</a>
                 </div>
+                <div class="col-md-4 cta">
+                    <div class="image-wrap">
+                        <img src="/img/logo-medium.png" alt="Smash Norway's logo" />
+                    </div>
+                </div>
             </article>
             <article class="row actions">
                 <div class="col-md-4">
-                    <img src="img/action-tournaments.png" alt="Smashturneringer" />
+                    <img src="/img/action-tournaments.png" alt="Smashturneringer" />
                     <h2>Turneringer</h2>
                 </div>
                 <div class="col-md-4">
-                    <img src="img/action-ranking.png" alt="Nasjonal og internasjonal ranking" />
+                    <img src="/img/action-ranking.png" alt="Nasjonal og internasjonal ranking" />
                     <h2>Ranking</h2>
                 </div>
                 <div class="col-md-4">
-                    <img src="img/action-news.png" alt="Nyheter" />
+                    <img src="/img/action-news.png" alt="Nyheter" />
                     <h2>Bloggen</h2>
                 </div>
             </article>
@@ -82,5 +83,6 @@
             </section>
         </footer>
     </div>
+    <script src="/bower_components/jquery/dist/jquery.js" />
 </body>
 </html>
