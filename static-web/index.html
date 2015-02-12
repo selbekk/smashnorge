@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="container-fluid header-wrap bg bg-cover bg-panorama">
+        <div class="nav-trigger visible-xs">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </div>
         <nav id="main-nav" class="row">
             <div class="container">
                 <ul class="nav nav-pills nav-justified">
@@ -28,7 +31,8 @@
         <div class="container">
             <header id="main-header" class="row">
                 <div class="col-sm-3">
-                    <img src="/img/logo-transparent.png" alt="Smash Norge logo" class="logo small" />
+                    <h1 class="visible-xs-block">Smash Norge</h1>
+                    <img src="/img/logo-transparent.png" alt="Smash Norge logo" class="logo small hidden-xs" />
                 </div>
             </header>
         </div>
@@ -36,7 +40,7 @@
     <div class="container">
         <section id="main-content" class="row">
             <article class="row cta-wrap">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <h1>Vi digger Melee!</h1>
                     <p class="lead">
                         Og det håper vi du også gjør. Her finner du Norges største Smash-community, i tillegg til
@@ -44,11 +48,6 @@
                         innen Super Smash Bros. Melee.
                     </p>
                     <a href="#" class="btn btn-info">Bli med du også da vel!</a>
-                </div>
-                <div class="col-md-4 cta">
-                    <div class="image-wrap">
-                        <img src="/img/logo-medium.png" alt="Smash Norway's logo" />
-                    </div>
                 </div>
             </article>
             <article class="row actions">
@@ -69,32 +68,37 @@
 
             </article>
         </section>
-        <footer id="main-footer" class="row">
-            <section class="col-md-4 list contact-info">
-                <h2>Smash Norge</h2>
-                <ul>
-                    <li>Org. nr. xxx xxx xxx</li>
-                    <li>post@smashnorge.no</li>
-                    <li>Medlem av hyperion.</li>
-                </ul>
-            </section>
-            <section class="col-md-4 list social-media">
-                <h2>Følg oss</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/SmashNorge"><img src="" alt="facebook"/></a></li>
-                    <li><a href="https://twitter.com/SmashNorge"><img src="" alt="twitter"/></a></li>
-                </ul>
-            </section>
-            <section class="col-md-4 list links">
-                <h2>Lær mer</h2>
-                <ul>
-                    <li><a href="#">En link</a></li>
-                    <li><a href="#">Enda en link</a></li>
-                    <li><a href="https://www.github.com/selbekk/smashnorge">Github</a></li>
-                </ul>
-            </section>
-        </footer>
     </div>
-    <script src="/bower_components/jquery/dist/jquery.js" />
+    <div class="container-fluid footer-wrap">
+        <div class="container">
+            <footer id="main-footer" class="row">
+                <section class="col-md-4 list contact-info">
+                    <h2>Smash Norge</h2>
+                    <ul>
+                        <li>Org. nr. xxx xxx xxx</li>
+                        <li>post@smashnorge.no</li>
+                        <li>Medlem av hyperion.</li>
+                    </ul>
+                </section>
+                <section class="col-md-4 list social-media">
+                    <h2>Følg oss</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com/SmashNorge"><img src="" alt="facebook"/></a></li>
+                        <li><a href="https://twitter.com/SmashNorge"><img src="" alt="twitter"/></a></li>
+                    </ul>
+                </section>
+                <section class="col-md-4 list links">
+                    <h2>Lær mer</h2>
+                    <ul>
+                        <li><a href="#">En link</a></li>
+                        <li><a href="#">Enda en link</a></li>
+                        <li><a href="https://www.github.com/selbekk/smashnorge">Github</a></li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+    </div>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/js/menu.js"></script>
 </body>
 </html>

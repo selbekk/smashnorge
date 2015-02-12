@@ -1,10 +1,13 @@
 (function() {
-    var $trigger = $('.nav-trigger');
-    var $menu = $('#main-menu');
 
-    $(function() {
+    var $trigger = $('.nav-trigger');
+    var $menu = $('#main-nav');
+
+    $(document).ready(function() {
         $trigger.on('click', function() {
-            $trigger.slideUp($menu.slideDown);
+            $menu.slideToggle(200);
+            $trigger.find('span').toggleClass('glyphicon-menu-up');
+            $trigger.find('span').toggleClass('glyphicon-menu-hamburger');
         });
-    })
+    });
 })();
