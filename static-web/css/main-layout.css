@@ -1,0 +1,26 @@
+.header-wrap {
+    background-color: #eee;
+}
+
+#main-header {
+
+}
+
+#main-nav {
+    background-color: #313037;
+    color: white;
+}
+
+#main-nav ul li a {
+    color: white;
+    border-radius: 0;
+
+    transition: all 200ms ease-in-out;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus,
+#main-nav ul li.active a {
+    color: #313037;
+    background-color: #FF6347;
+}
