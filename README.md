@@ -25,4 +25,4 @@ Go into the folder `/static-web` and install Bower's dependencies:
 
 Start a local web server with the root in `/static-web`, and you're ready to go.
 
-Not a lot to see yet - of course, but we're also
+Not a lot to see yet - of course. We're hoping to get a basic version up and running in a few weeks.
