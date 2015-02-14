@@ -17,16 +17,23 @@
     background-image: url(../img/content/main-panorama.jpg);
 }
 
-    .nav-trigger {
+    .xs-trigger {
         background-color: #310307;
         padding: 10px 10px 10px;
         color: white;
         position: absolute;
         top: 0;
-        right: 15px;
         z-index: 1000;
         cursor: pointer;
     }
+
+        .xs-trigger.nav-trigger {
+            left: 15px;
+        }
+
+        .xs-trigger.search-trigger {
+            right: 15px;
+        }
 
     /* Main navigation */
     #main-nav {
