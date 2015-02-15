@@ -26,7 +26,8 @@ First off - install gulp through NPM:
 
 Then install all dependencies with
 
-    gulp install
+    npm install # installs all build dependencies
+    gulp install # installs all frontend dependencies
 
 And we're done! To start a test server, simply run
 
