@@ -114,7 +114,7 @@
     }
 
 .footer-wrap {
-    background: #313037 url(../img/bg-footer.png) top left repeat-x;
+    background: #313037 url(../img/bg-footer.png) top left;
     color: #eeeeee;
 }
 
@@ -126,6 +126,23 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.social-media ul {
+    display: block;
+}
+
+.social-media li {
+    display: inline-block;
+    width: 49%;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media img {
+    width: 30%;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Small devices (tablets, 768px and up) */
