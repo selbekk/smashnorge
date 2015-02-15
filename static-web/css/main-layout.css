@@ -126,6 +126,33 @@
         bottom: 0;
     }
 
+.fun-facts {
+    padding: 10px 0 20px;
+    background: #FF6347;
+}
+
+.fun-facts h1,
+.fun-facts h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+}
+
+.fun-facts h2 {
+    font-size: 150%;
+}
+
+.fun-facts ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fun-facts a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 .footer-wrap {
     background: #313037 url(../img/bg-footer.png) top left;
     color: #eeeeee;
