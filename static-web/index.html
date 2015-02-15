@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="/assets/styles.min.css" />
 </head>
 <body>
-    <div class="container-fluid header-wrap bg bg-cover bg-panorama">
-        <div class="xs-trigger nav-trigger visible-xs">
+    <div class="mobile-content visible-xs">
+        <!-- Mobile content (triggers, headers etc) -->
+        <div class="xs-trigger nav-trigger">
             <span class="glyphicon glyphicon-menu-hamburger"></span>
         </div>
-        <div class="xs-trigger search-trigger visible-xs">
+        <div class="xs-trigger search-trigger">
             <span class="glyphicon glyphicon-search"></span>
         </div>
+        <h1 class="main-title">Smash Norge</h1>
+    </div>
+    <div class="container-fluid header-wrap bg bg-cover bg-panorama">
+
+
         <nav id="main-nav" class="row">
             <div class="container">
                 <ul class="nav nav-pills nav-justified">
@@ -34,7 +40,6 @@
         <div class="container">
             <header id="main-header" class="row">
                 <div class="col-sm-3">
-                    <h1 class="visible-xs-block">Smash Norge</h1>
                     <img src="/img/logo-transparent.png" alt="Smash Norge logo" class="logo small hidden-xs" />
                 </div>
             </header>
