@@ -17,12 +17,12 @@ This is a totally voluntary project, so any help is greatly appreciated.
 
 ## Initial setup
 
-Clone the repository, and make sure you've installed [node](http://nodejs.org/) and [bower](http://bower.io/).
+Install dependencies with `npm install`.
 
 Go into the folder `/static-web` and install Bower's dependencies:
 
     bower install
 
-Start a local web server with the root in `/static-web`, and you're ready to go.
+To start a test server, write `gulp serve`.
 
 Not a lot to see yet - of course. We're hoping to get a basic version up and running in a few weeks.
