@@ -7,6 +7,7 @@ var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
+var install = require('gulp-install');
 
 gulp.task('clear', function() {
     del('static-web/assets/**', function(err) {
@@ -36,13 +37,18 @@ gulp.task('style', function() {
         .pipe(gulp.dest('static-web/assets/'));
 });
 
-gulp.task('livereload', function() {
+gulp.task('live-reload', function() {
     gulp.src('static-web')
         .pipe(server({
             livereload: true,
             open: true,
             log: 'debug'
         }));
+});
+
+gulp.task('install', function() {
+    gulp.src(['./package.json', './static-web/bower.json'])
+        .pipe(install());
 });
 
 gulp.task('watch', function() {
@@ -52,5 +58,5 @@ gulp.task('watch', function() {
 
 
 gulp.task('build', ['clear', 'script', 'style']);
-gulp.task('serve', ['build', 'watch', 'livereload']);
+gulp.task('serve', ['build', 'watch', 'live-reload']);
 gulp.task('default', ['build']);

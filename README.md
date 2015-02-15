@@ -17,12 +17,19 @@ This is a totally voluntary project, so any help is greatly appreciated.
 
 ## Initial setup
 
-Install dependencies with `npm install`.
+This project is built with a nice new build tool called Gulp. It uses Node and NPM, so if you don't have it installed,
+head over to their [getting started guide](https://docs.npmjs.com/getting-started/installing-node).
 
-Go into the folder `/static-web` and install Bower's dependencies:
+First off - install gulp through NPM:
 
-    bower install
+    npm install gulp -g
 
-To start a test server, write `gulp serve`.
+Then install all dependencies with
+
+    gulp install
+
+And we're done! To start a test server, simply run
+
+    gulp serve
 
 Not a lot to see yet - of course. We're hoping to get a basic version up and running in a few weeks.
