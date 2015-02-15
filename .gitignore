@@ -23,3 +23,4 @@ wp-content/wp-cache-config.php
 # Dependencies
 node_modules/
 static-web/bower_components/
+static-web/assets/
