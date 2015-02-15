@@ -16,7 +16,7 @@
 
         var $search = $('.search-overlay');
 
-        $search.fadeIn(500);
+        $search.fadeIn(200);
         $(document).on('keyup', hideOnEscape);
         $search.find('.search-close-trigger').on('click', hide);
         $search.find('#search-form').on('submit', search);
