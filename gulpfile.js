@@ -40,7 +40,7 @@ gulp.task('style', function() {
 gulp.task('live-reload', function() {
     gulp.src('static-web')
         .pipe(server({
-            livereload: true,
+            livereload: false,
             open: true,
             log: 'debug'
         }));

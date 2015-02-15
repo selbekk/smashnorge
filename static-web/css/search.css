@@ -1,0 +1,60 @@
+.xs-trigger.search-close-trigger {
+    right: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.9);
+}
+
+.overlay div,
+.overlay form {
+    height: 100%;
+}
+
+.overlay .search-field form {
+    display: flex;
+}
+
+.overlay .search-field input {
+    background: transparent;
+    border-width: 0 0 3px 0;
+    border-bottom-color: #cccccc;
+    font-size: 200%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+    color: white;
+    width: 80%;
+}
+
+.overlay .search-field input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .overlay .search-field input {
+        font-size: 68px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
