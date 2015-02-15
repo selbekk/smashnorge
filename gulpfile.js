@@ -24,7 +24,7 @@ gulp.task('script', function() {
         .pipe(plumber())
         .pipe(jshint())
         .pipe(uglify())
-        .pipe(concat('scripts.js'))
+        .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest('static-web/assets/'));
 
 });
@@ -33,11 +33,11 @@ gulp.task('style', function() {
     return gulp.src('static-web/css/*.css')
         .pipe(cssPrefixed({browsers: ['last 2 versions'], cascade: false}))
         .pipe(minifyCss())
-        .pipe(concat('styles.css'))
+        .pipe(concat('styles.min.css'))
         .pipe(gulp.dest('static-web/assets/'));
 });
 
-gulp.task('live-reload', function() {
+gulp.task('server', function() {
     gulp.src('static-web')
         .pipe(server({
             livereload: false,
@@ -58,5 +58,5 @@ gulp.task('watch', function() {
 
 
 gulp.task('build', ['clear', 'script', 'style']);
-gulp.task('serve', ['build', 'watch', 'live-reload']);
+gulp.task('serve', ['build', 'watch', 'server']);
 gulp.task('default', ['build']);
