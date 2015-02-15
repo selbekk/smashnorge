@@ -93,7 +93,7 @@
         z-index: 1;
     }
 
-    .actions .action h2 {
+    .actions .action a h2 {
         text-align: center;
         position: absolute;
         bottom: 15%;
@@ -103,6 +103,14 @@
         z-index: 10;
         background-color: white;
         padding: 5px 0;
+        margin: 0;
+        transition: all 200ms ease-in-out;
+    }
+
+    .actions .action a:hover h2,
+    .actions .action a:focus h2 {
+        padding-bottom: 12%;
+        bottom: 0;
     }
 
 .footer-wrap {
