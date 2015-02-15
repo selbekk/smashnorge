@@ -1,0 +1,23 @@
+{
+  "name": "smashnorge",
+  "version": "1.0.0",
+  "description": "A website for Smash Norge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selbekk/smashnorge.git"
+  },
+  "keywords": [
+    "website",
+    "wordpress"
+  ],
+  "author": "Kristofer Selbekk <kristofer.selbekk@bekk.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selbekk/smashnorge/issues"
+  },
+  "homepage": "https://github.com/selbekk/smashnorge"
+}
