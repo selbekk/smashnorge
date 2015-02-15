@@ -20,5 +20,6 @@ wp-content/wp-cache-config.php
 # OS X
 .DS_Store
 
-# Static web stuff
+# Dependencies
+node_modules/
 static-web/bower_components/
