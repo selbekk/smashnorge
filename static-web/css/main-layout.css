@@ -67,6 +67,34 @@
         width: 100%;
     }
 
+    .btn-main-cta {
+        background-color: #FF6347;
+        color: white;
+        border-radius: 0;
+        border: 0;
+        font-size: 150%;
+    }
+
+.actions {
+    padding-top: 20px;
+}
+    .actions a {
+        display: block;
+        color: inherit;
+    }
+
+    .actions img {
+        border-radius: 50%;
+        width: 70%;
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .actions h2 {
+        text-align: center;
+    }
+
 .footer-wrap {
     background: #313037 url(../img/bg-footer.png) top left repeat-x;
     color: #eeeeee;
@@ -89,7 +117,6 @@
     }
     #main-header {
         padding-top: 200px;
-
     }
 }
 
