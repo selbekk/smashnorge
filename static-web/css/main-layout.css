@@ -57,8 +57,8 @@
 
     /* frontpage splash */
     #main-header {
-        padding-top: 200px;
-        transition: padding 500ms ease-in-out;
+        padding-top: 500px;
+        transition: all 500ms ease-in-out;
     }
 
     .mobile-content {
@@ -116,24 +116,18 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    
+    #main-nav {
+        display: block;
+    }
+
+    #main-header {
+        padding-top: 200px;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .newsfeed a {
 
-    }
-
-    .newsfeed a:hover,
-    .newsfeed a:focus {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .actions .action {
-        padding-bottom: 0;
-    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
