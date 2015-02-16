@@ -91,6 +91,10 @@
 .actions {
     padding: 20px 0;
 }
+
+    .actions .action {
+        padding-bottom: 20px;
+    }
     .actions .action a {
         display: block;
         color: inherit;
@@ -162,8 +166,20 @@
     .newsfeed a {
         color: white;
         display: block;
-        margin: 10px;
+        margin: 5px;
         background-color: #FF6347;
+
+        transition: all 200ms ease-in-out;
+    }
+
+    .newsfeed a:hover,
+    .newsfeed a:focus {
+        background-color: #cf4327;
+        text-decoration: none;
+    }
+
+    .newsfeed a:active {
+        background-color: #bf3317;
     }
 
     .newsfeed .date {
@@ -172,7 +188,7 @@
         font-family: "Bookman", Georgia, "Times New Roman", serif;
         padding: 10px 20px;
         line-height: 40px;
-        display: inline-block;
+        float: right;
         width: 100px;
     }
 
@@ -187,19 +203,8 @@
             text-align: center;
         }
 
-    .newsfeed .title {
-        font-size: 24px;
-        font-weight: 100;
-        padding: 20px 10px 0;
-        display: inline-block;
-    }
-
-    .newsfeed .title .lead-in {
-        text-transform: uppercase;
-    }
-
     .newsfeed .featured-picture-wrap {
-        display: inline-block;
+        float: left;
     }
 
     .newsfeed .featured-picture {
@@ -210,6 +215,24 @@
         background-position: center center;
         background-size: cover;
     }
+
+    .newsfeed .title {
+        font-size: 24px;
+        font-weight: 100;
+        padding: 10px 10px 0;
+    }
+
+    .newsfeed .news .title {
+        padding-left: 120px;
+    }
+
+    .newsfeed .title .lead-in {
+        text-transform: uppercase;
+    }
+
+.clearfix {
+    clear: both;
+}
 
 .footer-wrap {
     background: #313037 url(../img/bg-footer.png) top left;
@@ -255,7 +278,19 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .newsfeed a {
 
+    }
+
+    .newsfeed a:hover,
+    .newsfeed a:focus {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .actions .action {
+        padding-bottom: 0;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
