@@ -31,6 +31,7 @@ gulp.task('script', function() {
 
 gulp.task('style', function() {
     return gulp.src('static-web/css/*.css')
+        .pipe(plumber())
         .pipe(cssPrefixed({browsers: ['last 2 versions'], cascade: false}))
         .pipe(minifyCss())
         .pipe(concat('styles.min.css'))
