@@ -131,27 +131,85 @@
     background: #FF6347;
 }
 
-.fun-facts h1,
-.fun-facts h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    .fun-facts h1,
+    .fun-facts h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Bookman", Georgia, "Times New Roman", serif;
+    }
+
+    .fun-facts h2 {
+        font-size: 150%;
+    }
+
+    .fun-facts ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fun-facts a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+.newsfeed {
+    background-color: #313037;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
-.fun-facts h2 {
-    font-size: 150%;
-}
+    .newsfeed a {
+        color: white;
+        display: block;
+        margin: 10px;
+        background-color: #FF6347;
+    }
 
-.fun-facts ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+    .newsfeed .date {
+        background-color: white;
+        color: #313037;
+        font-family: "Bookman", Georgia, "Times New Roman", serif;
+        padding: 10px 20px;
+        line-height: 40px;
+        display: inline-block;
+        width: 100px;
+    }
 
-.fun-facts a {
-    color: inherit;
-    text-decoration: underline;
-}
+        .newsfeed .date .day {
+            font-size: 300%;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .newsfeed .date .month {
+            font-size: 20px;
+            text-align: center;
+        }
+
+    .newsfeed .title {
+        font-size: 24px;
+        font-weight: 100;
+        padding: 20px 10px 0;
+        display: inline-block;
+    }
+
+    .newsfeed .title .lead-in {
+        text-transform: uppercase;
+    }
+
+    .newsfeed .featured-picture-wrap {
+        display: inline-block;
+    }
+
+    .newsfeed .featured-picture {
+        width: 100px;
+        height: 100px;
+
+        background-color: green;
+        background-position: center center;
+        background-size: cover;
+    }
 
 .footer-wrap {
     background: #313037 url(../img/bg-footer.png) top left;
