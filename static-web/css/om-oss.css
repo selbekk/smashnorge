@@ -1,0 +1,15 @@
+
+#about-us-main{
+    padding-left: 10%;
+    background-color: antiquewhite;
+    display: inline-block;
+    width: 100%;
+}
+
+#right {
+    background-color: ghostwhite;
+    display: inline-block;
+    width: 100%;
+    padding-right:5%;
+    padding-left: 10%;
+}
