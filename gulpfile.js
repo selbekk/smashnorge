@@ -1,4 +1,13 @@
 var gulp = require('gulp');
+
+// Install npm packages
+// Needs to be up here to work correctly
+gulp.task('install', function() {
+    gulp.src(['./package.json', './static-web/bower.json'])
+        .pipe(install());
+});
+
+// Now the rest of the dependencies
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var del = require('del');
@@ -9,7 +18,8 @@ var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var install = require('gulp-install');
 
-gulp.task('clear', function() {
+// Clean build folder
+gulp.task('clean', function() {
     del('static-web/assets/**', function(err) {
         if(err) {
             console.error('could not empty build folder. error:', err);
@@ -19,6 +29,7 @@ gulp.task('clear', function() {
     });
 });
 
+// Handle frontend JS build
 gulp.task('script', function() {
     return gulp.src('static-web/js/*.js')
         .pipe(plumber())
@@ -29,6 +40,7 @@ gulp.task('script', function() {
 
 });
 
+// Handle CSS build
 gulp.task('style', function() {
     return gulp.src('static-web/css/*.css')
         .pipe(plumber())
@@ -38,6 +50,7 @@ gulp.task('style', function() {
         .pipe(gulp.dest('static-web/assets/'));
 });
 
+// Development server @ localhost:8000
 gulp.task('server', function() {
     gulp.src('static-web')
         .pipe(server({
@@ -47,17 +60,14 @@ gulp.task('server', function() {
         }));
 });
 
-gulp.task('install', function() {
-    gulp.src(['./package.json', './static-web/bower.json'])
-        .pipe(install());
-});
 
+// Watch for updates in files to recompile assets
 gulp.task('watch', function() {
     gulp.watch('static-web/js/*.js', ['script']);
     gulp.watch('static-web/css/*.css', ['style']);
 });
 
 
-gulp.task('build', ['clear', 'script', 'style']);
+gulp.task('build', ['clean', 'script', 'style']);
 gulp.task('serve', ['build', 'watch', 'server']);
 gulp.task('default', ['build']);
