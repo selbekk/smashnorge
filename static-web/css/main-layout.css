@@ -44,6 +44,23 @@
     color: white;
 }
 
+#main-nav .nav-logo {
+    height: 30px;
+    display: block;
+    opacity: 0.6;
+    margin: 5px 0;
+
+    transition: all 500ms ease-in-out;
+}
+
+#main-nav .nav-logo:hover,
+#main-nav .nav-logo:active {
+    opacity: 1;
+    height: 40px;
+    margin: 0;
+    transform: rotate(360deg);
+}
+
 #main-nav ul li a {
     color: white;
     border-radius: 0;
