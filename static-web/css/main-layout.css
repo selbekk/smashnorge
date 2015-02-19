@@ -1,10 +1,4 @@
-/* Header */
-
-.header-wrap {
-    background-color: #eee;
-    position: relative;
-}
-
+/* Mobile triggers and menus */
 .xs-trigger {
     padding: 10px 10px 10px;
     color: white;
@@ -14,13 +8,34 @@
     cursor: pointer;
 }
 
-    .xs-trigger.nav-trigger {
-        left: 15px;
-    }
+.xs-trigger.nav-trigger {
+    left: 15px;
+}
 
-    .xs-trigger.search-trigger {
-        right: 15px;
-    }
+.xs-trigger.search-trigger {
+    right: 15px;
+}
+
+.mobile-content {
+    padding: 10px 0;
+    position: relative;
+    background-color: #FF6347;
+}
+
+.mobile-content h1.main-title  {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 135%;
+}
+
+/* Navigation strip */
+
+.header-wrap {
+    background-color: #eee;
+    position: relative;
+}
 
 /* Main navigation */
 #main-nav {
@@ -43,30 +58,18 @@
     background-color: #FF6347;
 }
 
-/* frontpage splash */
+/* top splash */
 #main-header {
     padding-top: 200px;
     transition: all 500ms ease-in-out;
-}
-
-.mobile-content {
-    padding: 10px 0;
-    position: relative;
-    background-color: #FF6347;
-}
-
-.mobile-content h1.main-title  {
-    margin: 0;
-    padding: 0;
-    color: white;
-    text-align: center;
-    font-size: 135%;
 }
 
 #main-header img.logo {
     display: inline-block;
     width: 100%;
 }
+
+/* Common footer */
 
 .footer-wrap {
     background: #313037 url(../img/bg-footer.png) top left;
@@ -77,10 +80,19 @@
     padding-bottom: 40px;
 }
 
+    #main-footer .list h2 {
+        text-align: center;
+    }
+
+#main-footer .list .no-header {
+    margin-top: 20px;
+}
+
     #main-footer .list ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        text-align: center;
     }
 
     #main-footer .social-media ul {
@@ -88,8 +100,7 @@
     }
 
     #main-footer .social-media li {
-        display: inline-block;
-        width: 49%;
+        display: block;
         margin: 0;
         padding: 0;
     }
@@ -108,6 +119,10 @@
 
     #main-header {
         padding-top: 100px;
+    }
+
+    #main-footer .list .no-header {
+        margin-top: 70px;
     }
 }
 
