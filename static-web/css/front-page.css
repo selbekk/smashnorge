@@ -1,3 +1,15 @@
+.bg {
+    background: no-repeat center center;
+}
+
+.bg.bg-cover {
+    background-size: cover;
+}
+
+.bg.bg-panorama {
+    background-image: url(../img/content/main-panorama.jpg);
+}
+
 .btn-main-cta {
     background-color: #FF6347;
     color: white;
