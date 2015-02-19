@@ -57,7 +57,7 @@
 
     /* frontpage splash */
     #main-header {
-        padding-top: 500px;
+        padding-top: 200px;
         transition: all 500ms ease-in-out;
     }
 
@@ -121,7 +121,7 @@
     }
 
     #main-header {
-        padding-top: 200px;
+        padding-top: 100px;
     }
 }
 
