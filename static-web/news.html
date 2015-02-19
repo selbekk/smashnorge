@@ -17,14 +17,14 @@
     <div class="xs-trigger search-trigger">
         <span class="glyphicon glyphicon-search"></span>
     </div>
-    <h1 class="main-title">Smash Norge</h1>
+    <h1 class="main-title">Nyheter</h1>
 </div>
 <div class="container-fluid header-wrap bg bg-cover bg-panorama">
 
     <nav id="main-nav" class="row">
         <div class="container">
             <div class="row">
-                <div class="col-sm-1">
+                <div class="col-sm-1 hidden-xs">
                     <a href="/">
                         <img src="/img/small-logo-transparent-full.png" alt="Smash Norge logo" class="nav-logo"/>
                     </a>
@@ -51,20 +51,40 @@
 
 <div class="container">
     <div class="blog-wrapper row">
-        <section class="blog-posts col-md-9">
+        <aside class="page-aside news-aside col-md-3 col-md-push-9">
+            <div class="filters">
+                <h2>Filtrér</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="filter"/> Turneringer
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filter"/> Reviews
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="filter"/> Intervjuer
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <!-- blog sidebar goes here -->
+        </aside>
+        <section class="blog-posts col-md-9 col-md-pull-3">
             <!-- blog posts go here -->
             <article class="blog-post">
                 <header class="post-header">
                     <h2><a href="#">Fantastisk innsats av Norge på Sickhack</a></h2>
                 </header>
                 <div class="post-content">
-                    <p>Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum
-                        cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus
-                        brains sit​​, morbo basal ganglia vel maleficia? </p>
-
-                    <p><a href="#" class="read-more btn btn-info">Les mer!</a></p>
+                    <p>Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? </p>
+                    <p><a href="#" class="read-more btn btn-cta">Les mer!</a></p>
                 </div>
-                <footer class="post-footer">
+                <footer class="post-footer hidden-xs">
                     <ul class="tags">
                         <li class="tag">
                             <a href="#">#sverige</a>
@@ -86,13 +106,10 @@
                     <h2><a href="#">Enda et innlegg</a></h2>
                 </header>
                 <div class="post-content">
-                    <p>Yagshemash! In US and A, if you want to marry a girl, you cannot just go to her father's house
-                        and swap her for 15 gallons of insecticide. Before American woman will allow you in her vazhïn,
-                        you must do something called dating.</p>
-
-                    <p><a href="#" class="read-more btn btn-info">Les mer!</a></p>
+                    <p>Yagshemash! In US and A, if you want to marry a girl, you cannot just go to her father's house and swap her for 15 gallons of insecticide. Before American woman will allow you in her vazhïn, you must do something called dating.</p>
+                    <p><a href="#" class="read-more btn btn-cta">Les mer!</a></p>
                 </div>
-                <footer class="post-footer">
+                <footer class="post-footer hidden-xs">
                     <ul class="tags">
                         <li class="tag">
                             <a href="#">#sverige</a>
@@ -119,10 +136,10 @@
                         ea in, nisi pig kielbasa dolore filet mignon tri-tip fatback quis capicola eiusmod.</p>
 
                     <p>
-                        <a href="#" class="btn btn-read-more">Les hele artikkelen!</a>
+                        <a href="#" class="read-more btn btn-cta">Les hele artikkelen!</a>
                     </p>
                 </div>
-                <footer class="post-footer">
+                <footer class="post-footer hidden-xs">
                     <ul class="tags">
                         <li class="tag">
                             <a href="#">#sverige</a>
@@ -140,29 +157,6 @@
                 </footer>
             </article>
         </section>
-        <aside class="page-aside news-aside col-md-3">
-            <div class="filters">
-                <h2>Filtrér</h2>
-                <ul>
-                    <li>
-                        <label>
-                            <input type="radio" name="filter"/> Turneringer
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="radio" name="filter"/> Reviews
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="radio" name="filter"/> Intervjuer
-                        </label>
-                    </li>
-                </ul>
-        </div>
-            <!-- blog sidebar goes here -->
-        </aside>
     </div>
 </div>
 
@@ -177,13 +171,13 @@
                     <li>Medlem av hyperion.</li>
                 </ul>
             </section>
-            <section class="col-sm-4 list social-media">
+            <section class="col-sm-4 list social-media hidden-xs">
                 <ul class="row no-header">
                     <li class="col-xs-6"><a href="https://www.facebook.com/SmashNorge"><img src="/img/facebook-icon-white.png" alt="facebook"/></a></li>
                     <li class="col-xs-6"><a href="https://twitter.com/SmashNorge"><img src="/img/twitter-icon-white.png" alt="twitter"/></a></li>
                 </ul>
             </section>
-            <section class="col-sm-4 list links">
+            <section class="col-sm-4 list links hidden-xs">
                 <h2>Lær mer</h2>
                 <ul>
                     <li><a href="#">En link</a></li>

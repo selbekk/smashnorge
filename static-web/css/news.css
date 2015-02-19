@@ -1,0 +1,60 @@
+
+
+.blog-wrapper .filters {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.blog-wrapper .filters h2 {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 150%;
+}
+
+.blog-wrapper .filters ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.blog-wrapper ul li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+.blog-wrapper ul li:last-of-type {
+    margin-right: 0;
+}
+
+.blog-wrapper ul li input {
+    margin-right: 5px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .blog-wrapper .filters h2 {
+        font-size: 150%;
+    }
+
+    .blog-wrapper .filters ul {
+        text-align: left;
+    }
+
+    .blog-wrapper .filters ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
