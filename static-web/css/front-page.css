@@ -31,13 +31,32 @@
         width: 100%;
     }
 
-    .actions .action img {
+    .actions .action .bg {
         border-radius: 50%;
-        width: 70%;
-        background: #eee;
         display: block;
+        width: 250px;
+        height: 250px;
         margin: 0 auto;
         z-index: 1;
+
+        transition: all 200ms ease-in-out;
+    }
+
+    .actions .action .bg:hover,
+    .actions .action .bg:focus {
+        filter: blur(2px);
+    }
+
+    .actions .action .bg-tournaments {
+        background-image: url(../img/content/tournaments-action.jpg);
+    }
+
+    .actions .action .bg-ranking {
+        background-image: url(../img/content/ranking-action.jpg);
+    }
+
+    .actions .action .bg-news {
+        background-image: url(../img/content/news-action.jpg);
     }
 
     .actions .action a h2 {
@@ -52,12 +71,6 @@
         padding: 5px 0;
         margin: 0;
         transition: all 200ms ease-in-out;
-    }
-
-    .actions .action a:hover h2,
-    .actions .action a:focus h2 {
-        padding-bottom: 12%;
-        bottom: 0;
     }
 
 .fun-facts {
