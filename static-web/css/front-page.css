@@ -1,9 +1,5 @@
-.bg {
-    background: no-repeat center center;
-}
-
-.bg.bg-cover {
-    background-size: cover;
+.front-page #main-header {
+    padding-top: 200px;
 }
 
 .bg.bg-panorama {
@@ -174,7 +170,9 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    
+    .front-page #main-header {
+        padding-top: 100px;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -192,6 +190,7 @@
     .actions .action {
         padding-bottom: 0;
     }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */

@@ -1,3 +1,14 @@
+/* Dynamically set backgrounds */
+
+.bg {
+    background: no-repeat center center;
+}
+
+.bg.bg-cover {
+    background-size: cover;
+}
+
+/* General utilities */
 
 .clearfix {
     clear: both;
