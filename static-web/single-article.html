@@ -5,7 +5,9 @@
     <title>Smash Norge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <!-- bower:css -->
+    <!-- endbower -->
+
     <link rel="stylesheet" href="/assets/styles.min.css"/>
 </head>
 <body>
@@ -55,35 +57,7 @@
 
 <div class="container">
     <div class="blog-wrapper row">
-        <aside class="page-aside news-aside col-md-3 col-md-push-9">
-            <section class="related-articles">
-                <h2>Les også</h2>
-                <ul>
-                    <li>
-                        <a class="related-article" href="/single-article.html">
-                            <img src="https://placeimg.com/100/80/any" alt=""/>
-
-                            <h3>En flaske bræss og en pose smash</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="related-article" href="/single-article.html">
-                            <img src="https://placeimg.com/100/80/any" alt=""/>
-
-                            <h3>Vi har nådd 500 medlemmer!</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="related-article" href="/single-article.html">
-                            <img src="https://placeimg.com/100/80/any" alt=""/>
-
-                            <h3>Er det blitt in å spille Melee?</h3>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </aside>
-        <section class="blog-posts col-md-9 col-md-pull-3">
+        <section class="blog-posts col-md-9">
             <div class="article blog-post content">
                 <p class="lead">
                     Phat ipsum dolizzle check out this amizzle, consectetizzle adipiscing i saw beyonces tizzles and my pizzle went crizzle. Nullizzle sapien velizzle, pizzle volutpizzle, suscipit quis, sizzle vizzle, uhuh ... yih!. Pellentesque fo shizzle my nizzle fo. Pimpin' erizzle.
@@ -134,6 +108,36 @@
 
             </div>
         </section>
+
+        <aside class="page-aside news-aside col-md-3">
+            <section class="related-articles">
+                <h2>Les også</h2>
+                <ul>
+                    <li class="shake shake-little">
+                        <a class="related-article" href="/single-article.html">
+                            <img src="https://placeimg.com/100/80/animals" alt=""/>
+
+                            <h3>En flaske bræss og en pose smash</h3>
+                        </a>
+                    </li>
+                    <li class="shake shake-little">
+                        <a class="related-article" href="/single-article.html">
+                            <img src="https://placeimg.com/100/80/arch" alt=""/>
+
+                            <h3>Vi har nådd 500 medlemmer!</h3>
+                        </a>
+                    </li>
+                    <li class="shake shake-little">
+                        <a class="related-article" href="/single-article.html">
+                            <img src="https://placeimg.com/100/80/tech" alt=""/>
+
+                            <h3>Er det blitt in å spille Melee?</h3>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
     </div>
 </div>
 
@@ -170,7 +174,8 @@
 </div>
 
 
-<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- bower:js -->
+<!-- endbower -->
 <script src="/assets/scripts.min.js"></script>
 </body>
 </html>

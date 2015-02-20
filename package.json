@@ -12,8 +12,8 @@
     "wordpress"
   ],
   "author": [
-      "Kristofer Selbekk <kristofer.selbekk@bekk.no>",
-      "Vegard Nyeng <vegard.nyeng@gmail.com>"
+    "Kristofer Selbekk <kristofer.selbekk@bekk.no>",
+    "Vegard Nyeng <vegard.nyeng@gmail.com>"
   ],
   "license": "ISC",
   "bugs": {
@@ -32,5 +32,8 @@
     "gulp-plumber": "^0.6.6",
     "gulp-server-livereload": "^1.0.2",
     "gulp-uglify": "^1.1.0"
+  },
+  "dependencies": {
+    "wiredep": "^2.2.2"
   }
 }

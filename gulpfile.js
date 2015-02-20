@@ -17,6 +17,7 @@ var plumber = require('gulp-plumber');
 var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var install = require('gulp-install');
+var wiredep = require('wiredep').stream;
 
 // Clean build folder
 gulp.task('clean', function() {
@@ -50,6 +51,16 @@ gulp.task('style', function() {
         .pipe(gulp.dest('static-web/assets/'));
 });
 
+// Wire in bower dependencies
+gulp.task('bower', function () {
+    gulp.src('./static-web/*.html')
+        .pipe(wiredep({
+            directory: './static-web/bower_components',
+            bowerJson: require('./static-web/bower.json')
+        }))
+        .pipe(gulp.dest('./static-web/assets'));
+});
+
 // Development server @ localhost:8000
 gulp.task('server', function() {
     gulp.src('static-web')
@@ -65,9 +76,10 @@ gulp.task('server', function() {
 gulp.task('watch', function() {
     gulp.watch('static-web/js/*.js', ['script']);
     gulp.watch('static-web/css/*.css', ['style']);
+    gulp.watch('static-web/bower.json', ['bower']);
 });
 
 
-gulp.task('build', ['clean', 'script', 'style']);
+gulp.task('build', ['clean', 'script', 'style', 'bower']);
 gulp.task('serve', ['build', 'watch', 'server']);
 gulp.task('default', ['build']);
