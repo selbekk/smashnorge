@@ -1,3 +1,7 @@
+/*****************************************/
+/*     Styles for the general layout     */
+/*****************************************/
+
 /* Mobile triggers and menus */
 .xs-trigger {
     padding: 10px 10px 10px;
@@ -44,6 +48,23 @@
     color: white;
 }
 
+#main-nav .nav-logo {
+    height: 30px;
+    display: block;
+    opacity: 0.6;
+    margin: 5px 0;
+
+    transition: all 500ms ease-in-out;
+}
+
+#main-nav .nav-logo:hover,
+#main-nav .nav-logo:active {
+    opacity: 1;
+    height: 40px;
+    margin: 0;
+    transform: rotate(1080deg);
+}
+
 #main-nav ul li a {
     color: white;
     border-radius: 0;
@@ -59,14 +80,25 @@
 }
 
 /* top splash */
+.header-filter {
+    transition: all 500ms ease-in-out;
+}
+
 #main-header {
-    padding-top: 200px;
+    padding-top: 100px;
     transition: all 500ms ease-in-out;
 }
 
 #main-header img.logo {
     display: inline-block;
     width: 100%;
+}
+
+#main-header h1 {
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 600%;
 }
 
 /* Common footer */
@@ -113,12 +145,22 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header-filter {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
     #main-nav {
         display: block;
     }
 
     #main-header {
-        padding-top: 100px;
+        padding-top: 150px;
     }
 
     #main-footer .list .no-header {
@@ -133,5 +175,7 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+    .container {
+        max-width: 970px;
+    }
 }

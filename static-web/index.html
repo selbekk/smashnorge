@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/assets/styles.min.css" />
 </head>
-<body>
+<body class="front-page">
     <div class="mobile-content visible-xs">
         <!-- Mobile content (triggers, headers etc) -->
         <div class="xs-trigger nav-trigger">
@@ -23,16 +23,24 @@
 
         <nav id="main-nav" class="row">
             <div class="container">
-                <ul class="nav nav-pills nav-justified">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li><a href="#" title="">Nyheter</a></li>
-                    <li><a href="#" title="">Bli medlem</a></li>
-                    <li><a href="#" title="">Turneringer</a></li>
-                    <li><a href="#" title="">Ranking</a></li>
-                    <li><a href="#" title="">Om oss</a></li>
-                    <li><a href="#" title="">Kontakt oss</a></li>
-                    <li class="search-trigger"><a href="#" title="Søk"><span class="glyphicon glyphicon-search hidden-xs"></span></a></li>
-                </ul>
+                <div class="row">
+                    <div class="col-sm-1 hidden-xs">
+                        <a href="/">
+                            <img src="/img/small-logo-transparent-full.png" alt="Smash Norge logo" class="nav-logo"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-11">
+                        <ul class="nav nav-pills nav-justified">
+                            <li><a href="/news.html" title="">Nyheter</a></li>
+                            <li><a href="/signup.html" title="">Bli medlem</a></li>
+                            <li><a href="/tournaments.html" title="">Turneringer</a></li>
+                            <li><a href="/ranking.html" title="">Ranking</a></li>
+                            <li><a href="/about-us.html" title="">Om oss</a></li>
+                            <li><a href="/contact-us.html" title="">Kontakt oss</a></li>
+                            <li class="search-trigger"><a href="#" title="Søk"><span class="glyphicon glyphicon-search hidden-xs"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -47,7 +55,7 @@
     <div class="container">
         <section id="main-content" class="row">
             <article class="row cta-wrap">
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <h1>Vi digger Melee!</h1>
                     <p class="lead">
                         Og det håper vi du også gjør. Her finner du Norges største Smash-community, i tillegg til
@@ -90,21 +98,21 @@
         </section>
     </div>
 
-    <div class="container">
+    <div class="container hidden-xs">
         <article class="row actions">
-            <div class="col-md-4 col-xs-6 action">
+            <div class="col-sm-4 action">
                 <a href="#">
                     <div class="bg bg-cover bg-circle bg-tournaments"></div>
                     <h2>Turneringer</h2>
                 </a>
             </div>
-            <div class="col-md-4 col-xs-6 action">
+            <div class="col-sm-4 action">
                 <a href="#">
                     <div class="bg bg-cover bg-circle bg-ranking"></div>
                     <h2>Ranking</h2>
                 </a>
             </div>
-            <div class="col-md-4 col-xs-6 action">
+            <div class="col-sm-4 action">
                 <a href="#">
                     <div class="bg bg-cover bg-circle bg-news"></div>
                     <h2>Bloggen</h2>
@@ -125,13 +133,13 @@
                         <li>Medlem av hyperion.</li>
                     </ul>
                 </section>
-                <section class="col-sm-4 list social-media">
+                <section class="col-sm-4 list social-media hidden-xs">
                     <ul class="row no-header">
                         <li class="col-xs-6"><a href="https://www.facebook.com/SmashNorge"><img src="/img/facebook-icon-white.png" alt="facebook"/></a></li>
                         <li class="col-xs-6"><a href="https://twitter.com/SmashNorge"><img src="/img/twitter-icon-white.png" alt="twitter"/></a></li>
                     </ul>
                 </section>
-                <section class="col-sm-4 list links">
+                <section class="col-sm-4 list links hidden-xs">
                     <h2>Lær mer</h2>
                     <ul>
                         <li><a href="#">En link</a></li>

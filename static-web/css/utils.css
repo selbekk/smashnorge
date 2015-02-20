@@ -1,3 +1,35 @@
+/* Dynamically set backgrounds */
+
+.bg {
+    background: no-repeat center center;
+}
+
+.bg.bg-cover {
+    background-size: cover;
+}
+
+/* Buttons */
+
+.btn {
+    background-color: #FF6347;
+    color: white;
+    border-radius: 0;
+    border: 0;
+
+    transition: all 200ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+    color: white;
+    background-color: #DF4327;
+}
+
+.btn:active {
+    background-color: #CF3317;
+}
+
+/* General utilities */
 
 .clearfix {
     clear: both;
