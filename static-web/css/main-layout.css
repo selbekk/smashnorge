@@ -80,6 +80,10 @@
 }
 
 /* top splash */
+.header-filter {
+    transition: all 500ms ease-in-out;
+}
+
 #main-header {
     padding-top: 100px;
     transition: all 500ms ease-in-out;
@@ -88,6 +92,13 @@
 #main-header img.logo {
     display: inline-block;
     width: 100%;
+}
+
+#main-header h1 {
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 600%;
 }
 
 /* Common footer */
@@ -134,12 +145,22 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header-filter {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
     #main-nav {
         display: block;
     }
 
     #main-header {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 
     #main-footer .list .no-header {
