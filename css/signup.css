@@ -46,6 +46,12 @@
     width: 100%;
 }
 
+.bod label {
+    font-weight: 300;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .field.row .choice,
