@@ -96,6 +96,8 @@ gulp.task('watch', function() {
     gulp.watch('js/*.js', ['script']);
     gulp.watch('css/*.css', ['style']);
     gulp.watch('bower.json', ['bower']);
+    gulp.watch('*.html', ['bower:wire']);
+    gulp.watch('bower.json', ['bower:copy']);
 });
 
 gulp.task('bower', ['bower:wire', 'bower:copy']);
