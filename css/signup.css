@@ -13,6 +13,12 @@
 .field.row .choice:last-of-type,
 .field.row > div:last-of-type {
     margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+.field.row > div.city {
+    padding-left: 0;
 }
 
 .field.row .choice input {
@@ -61,12 +67,6 @@
         font-size: 18px;
         display: inline-block;
         margin-bottom: 0;
-    }
-
-    .field.row .choice:last-of-type,
-    .field.row > div:last-of-type {
-        padding-left: 15px;
-        padding-right: 0;
     }
 
     .field.sign-up .btn-container {

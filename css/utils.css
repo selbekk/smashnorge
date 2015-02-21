@@ -34,3 +34,7 @@
 .clearfix {
     clear: both;
 }
+
+.lead.lead-main {
+    margin: 20px 0;
+}
