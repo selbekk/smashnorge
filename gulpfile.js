@@ -1,13 +1,5 @@
 var gulp = require('gulp');
 
-
-var install = require('gulp-install');
-// Install npm packages
-// Needs to be up here to work correctly
-gulp.task('install', function() {
-    gulp.src(['./package.json', './bower.json'])
-        .pipe(install());
-});
 // Now the rest of the dependencies
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
