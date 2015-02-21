@@ -11,6 +11,7 @@ var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var wiredep = require('wiredep').stream;
 var changed = require('gulp-changed');
+var fs = require('fs');
 
 // Clean build folder
 gulp.task('clean:img', function (cb) {
@@ -31,7 +32,7 @@ gulp.task('clean:css', function (cb) {
 
 
 // Handle frontend JS build
-gulp.task('script', function() {
+gulp.task('script', function () {
     return gulp.src('js/*.js')
         .pipe(plumber())
         .pipe(jshint())
@@ -42,7 +43,7 @@ gulp.task('script', function() {
 });
 
 // Handle CSS build
-gulp.task('style', function() {
+gulp.task('style', function () {
     return gulp.src('css/*.css')
         .pipe(plumber())
         .pipe(cssPrefixed({browsers: ['last 2 versions'], cascade: false}))
@@ -66,14 +67,14 @@ gulp.task('bower:copy', function () {
         .pipe(gulp.dest('dist/bower_components'));
 });
 
-gulp.task('images', function() {
-   gulp.src('img/**')
-       .pipe(changed('dist/img'))
-       .pipe(gulp.dest('dist/img'));
+gulp.task('images', function () {
+    gulp.src('img/**')
+        .pipe(changed('dist/img'))
+        .pipe(gulp.dest('dist/img'));
 });
 
 // Development server @ localhost:8000
-gulp.task('server', function() {
+gulp.task('server', function () {
     gulp.src('dist')
         .pipe(server({
             livereload: false,
@@ -82,9 +83,18 @@ gulp.task('server', function() {
         }));
 });
 
+// Prompt
+gulp.task('prompt', function () {
+    return fs.readFile('prompt.txt', 'utf8', function (err, data) {
+        if (err) {
+            throw err;
+        }
+        console.log(data);
+    });
+});
 
 // Watch for updates in files to recompile assets
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch('js/*.js', ['script']);
     gulp.watch('css/*.css', ['style']);
     gulp.watch('bower.json', ['bower']);
@@ -97,3 +107,7 @@ gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
 gulp.task('build', ['clean', 'script', 'style', 'bower', 'images']);
 gulp.task('serve', ['build', 'watch', 'server']);
 gulp.task('default', ['build']);
+
+/* 5up3r s3cr37 34573r366 */
+
+gulp.task('smash', ['prompt', 'serve']);
