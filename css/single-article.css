@@ -2,6 +2,35 @@
     margin: 20px 0;
 }
 
+.blog-wrapper .blog-post .about-post {
+    max-width: 100%;
+    border: 1px solid #313037;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+    transition: all 200ms ease-in-out;
+}
+
+.blog-wrapper .blog-post .about-post ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.blog-wrapper .blog-post .about-post h3 {
+    margin: 0;
+}
+
+.blog-wrapper .blog-post .about-post a {
+    color: #313037;
+}
+
+.blog-wrapper .blog-post .about-post span {
+    color: #FF6347;
+}
+
 .blog-wrapper .news-aside .related-articles h3 {
     margin: 10px 0;
 }
@@ -16,6 +45,18 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+    .blog-wrapper .blog-post .about-post {
+        max-width: 50%;
+        float: right;
+        margin: 10px 20px;
+    }
+
+    .blog-wrapper .blog-post .about-post ul {
+        display: inline-block;
+        float: right;
+        text-align: right;
+    }
+
     .blog-wrapper .news-aside img {
         width: 60%;
     }
@@ -23,6 +64,26 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+    .blog-wrapper .blog-post .about-post {
+        width: 40%;
+    }
+
+    .blog-wrapper .blog-post .about-post h3 {
+        margin-bottom: 3px;
+    }
+
+    .blog-wrapper .blog-post .about-post span {
+        text-align: center;
+        float: right;
+        display: inline-block;
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    .blog-wrapper .blog-post .about-post h3 span {
+        width: 22px;
+    }
 
     .blog-wrapper .news-aside .related-articles h3 {
         font-size: 120%;
