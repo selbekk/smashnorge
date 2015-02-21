@@ -33,4 +33,5 @@ And we're done! To start a test server, simply run
 
     gulp serve
 
-Not a lot to see yet - of course. We're hoping to get a basic version up and running in a few weeks.
+The website is currently being designed as a general website with a few different templates. Since we're going to make a
+Wordpress template out of this, we have quite a few template files to create before we start wordpressifying this
