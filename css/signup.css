@@ -5,14 +5,14 @@
 .field.row .choice,
 .field.row > div {
     padding-left: 0;
-    font-size: 18px;
-    display: inline-block;
+    padding-right: 0;
+    margin-bottom: 20px;
 }
 
 .field.row .choice:last-of-type,
 .field.row > div:last-of-type {
-    padding-left: 15px;
-    padding-right: 0;
+    margin-bottom: 0;
+
 }
 
 .field.row .choice input {
@@ -36,4 +36,31 @@
 
 .field .form-control:focus {
     box-shadow: #FF6347;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .field.row .choice,
+    .field.row > div {
+        padding-left: 0;
+        font-size: 18px;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    .field.row .choice:last-of-type,
+    .field.row > div:last-of-type {
+        padding-left: 15px;
+        padding-right: 0;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
