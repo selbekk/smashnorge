@@ -3,10 +3,7 @@
 }
 
 .blog-wrapper .news-aside .related-articles h3 {
-    font-size: 150%;
     margin: 10px 0;
-    text-transform: uppercase;
-    color: #FF6347;
 }
 
 .blog-wrapper .news-aside .related-article {
@@ -16,15 +13,11 @@
     display: block;
 }
 
-.blog-wrapper .news-aside img {
-    width: 70%;
-    margin: 0 auto;
-}
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
     .blog-wrapper .news-aside img {
-        width: 80%;
+        width: 60%;
     }
 }
 
@@ -33,7 +26,6 @@
 
     .blog-wrapper .news-aside .related-articles h3 {
         font-size: 120%;
-        text-transform: none;
         color: #c1c0c7;
     }
 
