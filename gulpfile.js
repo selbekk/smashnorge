@@ -1,12 +1,13 @@
 var gulp = require('gulp');
 
+
+var install = require('gulp-install');
 // Install npm packages
 // Needs to be up here to work correctly
 gulp.task('install', function() {
     gulp.src(['./package.json', './bower.json'])
         .pipe(install());
 });
-
 // Now the rest of the dependencies
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
@@ -16,7 +17,6 @@ var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
-var install = require('gulp-install');
 var wiredep = require('wiredep').stream;
 var changed = require('gulp-changed');
 
