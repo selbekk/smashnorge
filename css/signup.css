@@ -1,0 +1,37 @@
+.field {
+    margin: 15px 0;
+}
+
+.field.row .choice {
+    padding-left: 0;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.field.row .choice:last-of-type {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+.field.row .choice input {
+    width: auto;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.field.row .choice .form-control,
+.field.row .choice .form-control:focus {
+    box-shadow: none;
+}
+
+.field .form-control {
+    font-size: 18px;
+    padding: 20px 15px;
+    border-radius: 0;
+    border-width: 0 0 1px 0;
+}
+
+.field .form-control:focus {
+    box-shadow: #FF6347;
+}
