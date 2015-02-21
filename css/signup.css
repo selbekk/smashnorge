@@ -2,13 +2,15 @@
     margin: 15px 0;
 }
 
-.field.row .choice {
+.field.row .choice,
+.field.row > div {
     padding-left: 0;
     font-size: 18px;
     display: inline-block;
 }
 
-.field.row .choice:last-of-type {
+.field.row .choice:last-of-type,
+.field.row > div:last-of-type {
     padding-left: 15px;
     padding-right: 0;
 }
