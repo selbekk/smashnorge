@@ -68,7 +68,7 @@
     <div class="signup-form row">
         <form class="col-md-8">
             <div class="field">
-                <input type="text" class="form-control" placeholder="Navnet ditt"/>
+                <input type="text" class="form-control" placeholder="Navnet ditt" required/>
             </div>
             <div class="field row">
                 <label class="choice">
@@ -79,24 +79,24 @@
                 </label>
             </div>
             <div class="field bod">
-                <input type="date" class="form-control" placeholder="Fødselsdag"/>
+                <input type="date" class="form-control" placeholder="Fødselsdag" required/>
             </div>
             <div class="field">
-                <input type="text" class="form-control" placeholder="Addresse"/>
+                <input type="text" class="form-control" placeholder="Addresse" required/>
             </div>
             <div class="field row">
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Postnr"/>
+                    <input type="text" class="form-control" placeholder="Postnr" pattern="\d{4}" required/>
                 </div>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" placeholder="Sted"/>
+                    <input type="text" class="form-control" placeholder="Sted" required/>
                 </div>
             </div>
             <div class="field">
-                <input type="tel" class="form-control" placeholder="Telefonnummer"/>
+                <input type="tel" class="form-control" placeholder="Telefonnummer" required/>
             </div>
             <div class="field">
-                <input type="email" class="form-control" placeholder="Epost"/>
+                <input type="email" class="form-control" placeholder="Epost" required/>
             </div>
         </form>
     </div>
