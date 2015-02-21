@@ -38,6 +38,14 @@
     box-shadow: #FF6347;
 }
 
+.field.sign-up {
+    margin-bottom: 20px;
+}
+
+.field.sign-up .btn-container .btn {
+    width: 100%;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .field.row .choice,
@@ -52,6 +60,10 @@
     .field.row > div:last-of-type {
         padding-left: 15px;
         padding-right: 0;
+    }
+
+    .field.sign-up .btn-container {
+        padding-left: 0 !important;
     }
 }
 
