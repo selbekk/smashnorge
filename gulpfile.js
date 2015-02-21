@@ -21,15 +21,22 @@ var wiredep = require('wiredep').stream;
 var changed = require('gulp-changed');
 
 // Clean build folder
-gulp.task('clean', function() {
-    var result = del.sync('dist/**');
-
-    if(!result) {
-        console.log('Project already cleaned. Skipping cleanup.');
-        return;
-    }
-    console.log('Deleted files/folders:\n', result.join('\n'));
+gulp.task('clean:img', function (cb) {
+    del(['dist/img/content/*', 'dist/img/*'], cb);
 });
+
+gulp.task('clean:html', function (cb) {
+    del(['dist/*.html'], cb);
+});
+
+gulp.task('clean:js', function (cb) {
+    del(['dist/*.js'], cb);
+});
+
+gulp.task('clean:css', function (cb) {
+    del(['dist/*.css'], cb);
+});
+
 
 // Handle frontend JS build
 gulp.task('script', function() {
@@ -83,10 +90,9 @@ gulp.task('watch', function() {
     gulp.watch('js/*.js', ['script']);
     gulp.watch('css/*.css', ['style']);
     gulp.watch('bower.json', ['bower']);
-    gulp.watch('img/*', ['images']);
 });
 
-
+gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
 gulp.task('build', ['clean', 'script', 'style', 'bower', 'images']);
 gulp.task('serve', ['build', 'watch', 'server']);
 gulp.task('default', ['build']);
