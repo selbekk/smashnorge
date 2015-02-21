@@ -60,12 +60,18 @@ gulp.task('style', function() {
 });
 
 // Wire in bower dependencies
-gulp.task('bower', function () {
+gulp.task('bower:wire', function () {
     gulp.src('*.html')
         .pipe(wiredep({
             // todo: prepend a / to path
         }))
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('bower:copy', function () {
+    gulp.src('bower_components/**')
+        .pipe(changed('dist/bower_components'))
+        .pipe(gulp.dest('dist/bower_components'));
 });
 
 gulp.task('images', function() {
@@ -92,6 +98,7 @@ gulp.task('watch', function() {
     gulp.watch('bower.json', ['bower']);
 });
 
+gulp.task('bower', ['bower:wire', 'bower:copy']);
 gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
 gulp.task('build', ['clean', 'script', 'style', 'bower', 'images']);
 gulp.task('serve', ['build', 'watch', 'server']);
