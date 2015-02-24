@@ -44,14 +44,18 @@
 }
 
 .page-aside .organizer {
-    padding: 10px;
+    padding: 10px 0;
     margin: 10px 0;
+}
 
-    background-color: #eee;
+.page-aside .organizer small {
+    text-transform: lowercase;
+    color: #616067;
 }
 
 .page-aside .organizer h2 {
     margin: 0;
+    text-transform: uppercase;
 }
 
 .page-aside .availability .btn {
