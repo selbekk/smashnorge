@@ -78,3 +78,8 @@
 .page-aside .facebook-event .btn {
     background-color: #0A5A75;
 }
+
+.page-aside .notes {
+    background-color: #f1f0f7;
+    padding: 10px;
+}
