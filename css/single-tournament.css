@@ -64,19 +64,33 @@
     text-transform: uppercase;
     font-weight: 300;
     padding: 15px 0;
+    transition: all 100ms linear;
 }
 
 .page-aside .availability.available .btn {
     background-color: #66AB08;
-    color: white;
+}
+
+.page-aside .availability.available .btn:hover,
+.page-aside .availability.available .btn:focus {
+    background-color: #569B00;
 }
 
 .page-aside .availability.not-available .btn {
     background-color: #FF6347;
 }
 
+.page-aside .availability.not-available .btn:hover,
+.page-aside .availability.not-available .btn:focus {
+    background-color: #EF5337;
+}
 .page-aside .facebook-event .btn {
     background-color: #0A5A75;
+}
+
+.page-aside .facebook-event .btn:hover,
+.page-aside .facebook-event .btn:focus {
+    background-color: #0A4A65;
 }
 
 .page-aside .notes {
