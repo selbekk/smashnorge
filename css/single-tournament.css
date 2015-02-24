@@ -24,6 +24,11 @@
     height: auto;
 }
 
+.schedule .table thead th:last-of-type,
+.schedule .table tbody td:last-of-type {
+    text-align: center;
+}
+
 /* Google Maps */
 #gmap_canvas img {
     max-width: none !important;
@@ -62,7 +67,7 @@
 
 .page-aside .availability .btn {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: bold;
     padding: 15px 0;
     transition: all 100ms linear;
 }
@@ -96,4 +101,17 @@
 .page-aside .notes {
     background-color: #f1f0f7;
     padding: 10px;
+}
+
+.page-aside .costs h3 {
+    margin: 0;
+    padding: 10px 0 5px;
+    color: #616067;
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+.page-aside .costs ul {
+    list-style-type: none;
+    padding: 0;
 }
