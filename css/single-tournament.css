@@ -41,6 +41,8 @@
 
 .page-aside .btn {
     width: 100%;
+    font-weight: 100;
+    padding: 10px 0;
 }
 
 .page-aside .organizer {
@@ -60,6 +62,8 @@
 
 .page-aside .availability .btn {
     text-transform: uppercase;
+    font-weight: 300;
+    padding: 15px 0;
 }
 
 .page-aside .availability.available .btn {
@@ -68,5 +72,9 @@
 }
 
 .page-aside .availability.not-available .btn {
+    background-color: #FF6347;
+}
 
+.page-aside .facebook-event .btn {
+    background-color: #0A5A75;
 }
