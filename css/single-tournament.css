@@ -1,0 +1,68 @@
+.tournament-meta {
+    background-color: #31849F;
+    color: white;
+    padding: 10px 0;
+}
+
+.tournament-meta li span {
+    vertical-align: middle;
+}
+
+.tournament-meta li .glyphicon {
+    font-size: 150%;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.tournament-meta li .info-value {
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.teaser-video iframe {
+    width: 100%;
+    height: auto;
+}
+
+/* Google Maps */
+#gmap_canvas img {
+    max-width: none !important;
+    background: none !important
+}
+
+/* Aside */
+.page-aside {
+
+}
+
+.page-aside section {
+
+}
+
+.page-aside .btn {
+    width: 100%;
+}
+
+.page-aside .organizer {
+    padding: 10px;
+    margin: 10px 0;
+
+    background-color: #eee;
+}
+
+.page-aside .organizer h2 {
+    margin: 0;
+}
+
+.page-aside .availability .btn {
+    text-transform: uppercase;
+}
+
+.page-aside .availability.available .btn {
+    background-color: #66AB08;
+    color: white;
+}
+
+.page-aside .availability.not-available .btn {
+
+}
