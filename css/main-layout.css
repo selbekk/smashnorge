@@ -143,6 +143,12 @@
         display: block;
     }
 
+/* Content styles */
+.content-wrap h2 {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 

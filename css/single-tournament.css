@@ -14,14 +14,22 @@
     display: inline-block;
 }
 
-.tournament-meta li .info-value {
+.tournament-meta li .info-value,
+.tournament-meta li a {
     font-weight: 100;
     text-transform: uppercase;
+    color: white;
+    text-decoration: none;
 }
 
 .teaser-video iframe {
     width: 100%;
     height: auto;
+}
+
+.schedule .table thead th:last-of-type,
+.schedule .table tbody td:last-of-type {
+    text-align: center;
 }
 
 /* Google Maps */
@@ -41,28 +49,72 @@
 
 .page-aside .btn {
     width: 100%;
+    font-weight: 100;
+    padding: 10px 0;
 }
 
 .page-aside .organizer {
-    padding: 10px;
+    padding: 10px 0;
     margin: 10px 0;
+}
 
-    background-color: #eee;
+.page-aside .organizer small {
+    text-transform: lowercase;
+    color: #616067;
 }
 
 .page-aside .organizer h2 {
     margin: 0;
+    text-transform: uppercase;
 }
 
 .page-aside .availability .btn {
     text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 0;
+    transition: all 100ms linear;
 }
 
 .page-aside .availability.available .btn {
     background-color: #66AB08;
-    color: white;
+}
+
+.page-aside .availability.available .btn:hover,
+.page-aside .availability.available .btn:focus {
+    background-color: #569B00;
 }
 
 .page-aside .availability.not-available .btn {
+    background-color: #FF6347;
+}
 
+.page-aside .availability.not-available .btn:hover,
+.page-aside .availability.not-available .btn:focus {
+    background-color: #EF5337;
+}
+.page-aside .facebook-event .btn {
+    background-color: #0A5A75;
+}
+
+.page-aside .facebook-event .btn:hover,
+.page-aside .facebook-event .btn:focus {
+    background-color: #0A4A65;
+}
+
+.page-aside .notes {
+    background-color: #f1f0f7;
+    padding: 10px;
+}
+
+.page-aside .costs h3 {
+    margin: 0;
+    padding: 10px 0 5px;
+    color: #616067;
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+.page-aside .costs ul {
+    list-style-type: none;
+    padding: 0;
 }
