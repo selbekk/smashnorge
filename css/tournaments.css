@@ -1,0 +1,112 @@
+
+.tournament {
+    padding: 10px 0 0;
+}
+
+.tournament a {
+    color: white;
+    display: block;
+    margin: 5px;
+    background-color: #FF6347;
+
+    transition: all 200ms ease-in-out;
+}
+
+.tournament a:hover,
+.tournament a:focus {
+    background-color: #cf4327;
+    text-decoration: none;
+}
+
+.tournament a:active {
+    background-color: #bf3317;
+}
+
+.tournament .date {
+    background-color: white;
+    color: #313037;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    padding: 10px 20px;
+    line-height: 40px;
+    float: right;
+    width: 100px;
+}
+
+.tournament .date .day {
+    font-size: 300%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tournament .date .month {
+    font-size: 20px;
+    text-align: center;
+}
+
+.tournament .featured-picture-wrap {
+    float: left;
+}
+
+.tournament .featured-picture {
+    width: 100px;
+    height: 100px;
+
+    background-position: center center;
+    background-size: cover;
+}
+
+.tournament .title {
+    font-size: 24px;
+    font-weight: 100;
+    padding: 10px 10px 0;
+}
+
+.tournament .title .lead-in {
+    text-transform: uppercase;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .tournament a:hover,
+    .tournament a:focus {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+
+/* Syndicated news feed of international tournaments */
+
+.syndicated-list {
+    max-height: 400px;
+    overflow-y: scroll;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+.syndicated-list li {
+    padding: 10px;
+    background-color: #eeeeee;
+    margin: 0 0 10px 0;
+
+    transition: all 100ms linear;
+}
+
+.syndicated-list li:hover,
+.syndicated-list li:focus {
+    background-color: #dedede;
+}
+
+.syndicated-list li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.syndicated-list li a h3 {
+    margin: 0 0 5px 0;
+    font-size: 130%;
+}
