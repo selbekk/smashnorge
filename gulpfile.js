@@ -13,6 +13,9 @@ var wiredep = require('wiredep').stream;
 var changed = require('gulp-changed');
 var fs = require('fs');
 
+// constants goes here
+const WORDPRESS_THEME = 'smash-norge';
+
 // Clean build folder
 gulp.task('clean:img', function (cb) {
     del(['dist/img/content/*', 'dist/img/*'], cb);
@@ -54,7 +57,7 @@ gulp.task('style', function () {
 
 // Wire in bower dependencies
 gulp.task('bower:wire', function () {
-    gulp.src('*.html')
+    return gulp.src('*.html')
         .pipe(wiredep({
             // todo: prepend a / to path
         }))
@@ -62,20 +65,20 @@ gulp.task('bower:wire', function () {
 });
 
 gulp.task('bower:copy', function () {
-    gulp.src('bower_components/**')
+    return gulp.src('bower_components/**')
         .pipe(changed('dist/bower_components'))
         .pipe(gulp.dest('dist/bower_components'));
 });
 
 gulp.task('images', function () {
-    gulp.src('img/**')
+    return gulp.src('img/**')
         .pipe(changed('dist/img'))
         .pipe(gulp.dest('dist/img'));
 });
 
 // Development server @ localhost:8000
 gulp.task('server', function () {
-    gulp.src('dist')
+    return gulp.src('dist')
         .pipe(server({
             livereload: false,
             open: true,
@@ -91,6 +94,17 @@ gulp.task('prompt', function () {
         }
         console.log(data);
     });
+});
+
+// Wordpress tasks
+gulp.task('wordpress:theme', ['build'], function() {
+    return gulp.src('dist/assets/**')
+        .pipe(gulp.dest('theme/assets'));
+});
+
+gulp.task('wordpress:install', ['dist:assets-to-theme'], function() {
+    return gulp.src('theme/**')
+        .pipe(gulp.dest('wordpress/wp-content/themes'))
 });
 
 // Watch for updates in files to recompile assets
