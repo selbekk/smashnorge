@@ -17,24 +17,13 @@ var fs = require('fs');
 const WORDPRESS_THEME = 'smash-norge';
 
 // Clean build folder
-gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
-
-gulp.task('clean:html', function (cb) {
-    del(['dist/*.html'], cb);
+gulp.task('clean', function(cb) {
+    del(['dist/**', '!dist/**.[png|jpg]'], cb);
 });
-
-gulp.task('clean:js', function (cb) {
-    del(['dist/*.js'], cb);
-});
-
-gulp.task('clean:css', function (cb) {
-    del(['dist/*.css'], cb);
-});
-
 
 // Handle frontend JS build
-gulp.task('script', function () {
-    return gulp.src('js/*.js')
+gulp.task('script', ['clean'], function () {
+    return gulp.src('src/js/*.js')
         .pipe(plumber())
         .pipe(jshint())
         .pipe(uglify())
@@ -44,8 +33,8 @@ gulp.task('script', function () {
 });
 
 // Handle CSS build
-gulp.task('style', function () {
-    return gulp.src('css/*.css')
+gulp.task('style', ['clean'], function () {
+    return gulp.src('src/css/*.css')
         .pipe(plumber())
         .pipe(cssPrefixed({browsers: ['last 2 versions'], cascade: false}))
         .pipe(minifyCss())
@@ -54,16 +43,28 @@ gulp.task('style', function () {
 });
 
 // Bower tasks
-gulp.task('bower', ['bower:wire', 'bower:copy']);
+gulp.task('bower', ['bower:css', 'bower:js'], function() {
+    console.log('bower tasks completed');
+});
 
-gulp.task('bower:wire', function () {
-    wiredep({src: './*.html', dest: '/*.html'});
+gulp.task('bower:js', ['clean'], function () {
+    return gulp.src('bower_components/**.min.js')
+        .pipe(changed('vendor.min.js'))
+        .pipe(concat('vendor.min.js'))
+        .pipe(gulp.dest('dist/assets/'));
+});
+
+gulp.task('bower:css', ['clean'], function () {
+    return gulp.src('bower_components/**.min.css')
+        .pipe(changed('vendor.min.css'))
+        .pipe(concat('vendor.min.css'))
+        .pipe(gulp.dest('dist/assets/'));
 });
 
 gulp.task('images', function () {
-    return gulp.src('img/**')
-        .pipe(changed('dist/img'))
-        .pipe(gulp.dest('dist/img'));
+    return gulp.src('src/img/**')
+        .pipe(changed('dist/assets/img'))
+        .pipe(gulp.dest('dist/assets/img'));
 });
 
 // Development server @ localhost:8000
@@ -106,7 +107,7 @@ gulp.task('watch', function () {
     gulp.watch('bower.json', ['bower:copy']);
 });
 
-gulp.task('build', ['clean', 'script', 'style', 'bower', 'images']);
+gulp.task('build', ['script', 'style', 'bower', 'images']);
 gulp.task('serve', ['build', 'watch', 'server']);
 gulp.task('smash', ['prompt', 'serve']);
 gulp.task('default', ['build']);
