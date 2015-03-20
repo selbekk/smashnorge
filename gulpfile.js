@@ -113,4 +113,4 @@ gulp.task('watch', function () {
 gulp.task('compile', ['script', 'style', 'bower', 'images']);
 gulp.task('serve', ['compile', 'watch', 'server']);
 gulp.task('smash', ['prompt', 'serve']);
-gulp.task('default', ['compile']);
+gulp.task('default', ['wordpress']);
