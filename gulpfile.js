@@ -66,6 +66,12 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/assets/img'));
 });
 
+gulp.task('html', function() {
+    return gulp.src('src/*.html')
+        .pipe(changed('dist/*.html'))
+        .pipe(gulp.dest('dist'));
+});
+
 // Development server @ localhost:8000
 gulp.task('server', function () {
     return gulp.src('dist')
@@ -106,11 +112,9 @@ gulp.task('watch', function () {
     gulp.watch('js/*.js', ['script']);
     gulp.watch('css/*.css', ['style']);
     gulp.watch('bower.json', ['bower']);
-    gulp.watch('*.html', ['bower:wire']);
-    gulp.watch('bower.json', ['bower:copy']);
 });
 
-gulp.task('compile', ['script', 'style', 'bower', 'images']);
+gulp.task('compile', ['html', 'script', 'style', 'bower', 'images']);
 gulp.task('serve', ['compile', 'watch', 'server']);
 gulp.task('smash', ['prompt', 'serve']);
 gulp.task('default', ['wordpress']);
