@@ -9,151 +9,151 @@
     <link rel="stylesheet" href="/assets/styles.min.css"/>
 </head>
 <body>
-<div class="mobile-content visible-xs">
-    <!-- Mobile content (triggers, headers etc) -->
-    <div class="xs-trigger nav-trigger">
-        <span class="glyphicon glyphicon-menu-hamburger"></span>
+    <div class="mobile-content visible-xs">
+        <!-- Mobile content (triggers, headers etc) -->
+        <div class="xs-trigger nav-trigger">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </div>
+        <div class="xs-trigger search-trigger">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+        <h1 class="main-title">Nyheter</h1>
     </div>
-    <div class="xs-trigger search-trigger">
-        <span class="glyphicon glyphicon-search"></span>
-    </div>
-    <h1 class="main-title">Nyheter</h1>
-</div>
-<div class="container-fluid header-wrap bg bg-cover bg-panorama">
-    <div class="header-filter">
-        <nav id="main-nav" class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-1 hidden-xs">
-                        <a href="/">
-                            <img src="/assets/img/small-logo-transparent-full.png" alt="Smash Norge logo"
-                                 class="nav-logo"/>
-                        </a>
-                    </div>
-                    <div class="col-sm-11">
-                        <ul class="nav nav-pills nav-justified">
-                            <li><a href="/news.html" title="">Nyheter</a></li>
-                            <li class="active"><a href="/signup.html" title="">Bli medlem</a></li>
-                            <li><a href="/tournaments.html" title="">Turneringer</a></li>
-                            <li><a href="/ranking.html" title="">Ranking</a></li>
-                            <li><a href="/about-us.html" title="">Om oss</a></li>
-                            <li><a href="/contact-us.html" title="">Kontakt oss</a></li>
-                            <li class="search-trigger"><a href="#" title="Søk"><span
-                                    class="glyphicon glyphicon-search hidden-xs"></span></a></li>
-                        </ul>
+    <div class="container-fluid header-wrap bg bg-cover bg-panorama">
+        <div class="header-filter">
+            <nav id="main-nav" class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1 hidden-xs">
+                            <a href="/">
+                                <img src="/assets/img/small-logo-transparent-full.png" alt="Smash Norge logo"
+                                     class="nav-logo"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-11">
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="/news.html" title="">Nyheter</a></li>
+                                <li class="active"><a href="/signup.html" title="">Bli medlem</a></li>
+                                <li><a href="/tournaments.html" title="">Turneringer</a></li>
+                                <li><a href="/ranking.html" title="">Ranking</a></li>
+                                <li><a href="/about-us.html" title="">Om oss</a></li>
+                                <li><a href="/contact-us.html" title="">Kontakt oss</a></li>
+                                <li class="search-trigger"><a href="#" title="Søk"><span
+                                        class="glyphicon glyphicon-search hidden-xs"></span></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <div class="container">
-            <header id="main-header">
-                <h1 class="hidden-xs">Bli medlem</h1>
-            </header>
+            <div class="container">
+                <header id="main-header">
+                    <h1 class="hidden-xs">Bli medlem</h1>
+                </header>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="signup-intro">
-        <p class="lead lead-main">
-            <strong>Så kult at du vil være med!</strong> Som medlem får du egentlig bare fordeler. Vi holder
-            mange turneringer, har en veldig aktiv Facebook-side og ikke minst et fantastisk community! For å kunne være
-            med trenger vi å vite litt mer om deg, så gjør deg klar til å fylle ut et lite skjema.
-        </p>
-    </div>
-    <div class="signup-form row">
-        <form class="col-md-8">
-            <div class="field">
-                <input type="text" class="form-control" placeholder="Navnet ditt" required/>
-            </div>
-            <div class="field row">
-                <label class="choice">
-                    <input type="radio" name="sex" class="form-control"/> Bro
-                </label>
-                <label class="choice">
-                    <input type="radio" name="sex" class="form-control"/> Broette
-                </label>
-            </div>
-            <div class="field bod row">
-                <div class="col-xs-3">
-                    <label for="bod">Fødselsdag</label>
-                </div>
-                <div class="col-xs-9">
-                    <input id="bod" type="date" class="form-control" required/>
-                </div>
-            </div>
-            <div class="field">
-                <input type="text" class="form-control" placeholder="Addresse" required/>
-            </div>
-            <div class="field row">
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Postnr" pattern="\d{4}" required/>
-                </div>
-                <div class="col-sm-8 city">
-                    <input type="text" class="form-control" placeholder="Sted" required/>
-                </div>
-            </div>
-            <div class="field">
-                <input type="tel" class="form-control" placeholder="Telefonnummer" required/>
-            </div>
-            <div class="field">
-                <input type="email" class="form-control" placeholder="Epost" required/>
-            </div>
-
-            <div class="field info">
-                <p>
-                    <small>
-                        Vi har en <strong>årskontigent på kr 50,-</strong>. Ved å melde deg inn, godtar du å betale
-                        dette. Du vil få betalingsinformasjon på neste side (og på e-post), og kan begynne å delta med
-                        en eneste gang. Det høres ut som en god deal, eller hva?
-                    </small>
-                </p>
-            </div>
-
-            <div class="field sign-up row">
-                <div class="btn-container col-sm-3">
-                    <a href="#" class="btn btn-success btn-lg btn-block">Meld deg inn!</a>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="container-fluid footer-wrap">
     <div class="container">
-        <footer id="main-footer" class="row">
-            <section class="col-sm-4 list contact-info">
-                <h2>Smash Norge</h2>
-                <ul>
-                    <li>Org. nr. xxx xxx xxx</li>
-                    <li>post@smashnorge.no</li>
-                    <li>Medlem av hyperion.</li>
-                </ul>
-            </section>
-            <section class="col-sm-4 list social-media hidden-xs">
-                <ul class="row no-header">
-                    <li class="col-xs-6"><a href="https://www.facebook.com/SmashNorge"><img
-                            src="/assets/img/facebook-icon-white.png" alt="facebook"/></a></li>
-                    <li class="col-xs-6"><a href="https://twitter.com/SmashNorge"><img
-                            src="/assets/img/twitter-icon-white.png"
-                            alt="twitter"/></a></li>
-                </ul>
-            </section>
-            <section class="col-sm-4 list links hidden-xs">
-                <h2>Lær mer</h2>
-                <ul>
-                    <li><a href="#">En link</a></li>
-                    <li><a href="#">Enda en link</a></li>
-                    <li><a href="https://www.github.com/selbekk/smashnorge">Github</a></li>
-                </ul>
-            </section>
-        </footer>
+        <div class="signup-intro">
+            <p class="lead lead-main">
+                <strong>Så kult at du vil være med!</strong> Som medlem får du egentlig bare fordeler. Vi holder
+                mange turneringer, har en veldig aktiv Facebook-side og ikke minst et fantastisk community! For å kunne være
+                med trenger vi å vite litt mer om deg, så gjør deg klar til å fylle ut et lite skjema.
+            </p>
+        </div>
+        <div class="signup-form row">
+            <form class="col-md-8">
+                <div class="field">
+                    <input type="text" class="form-control" placeholder="Navnet ditt" required/>
+                </div>
+                <div class="field row">
+                    <label class="choice">
+                        <input type="radio" name="sex" class="form-control"/> Bro
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sex" class="form-control"/> Broette
+                    </label>
+                </div>
+                <div class="field bod row">
+                    <div class="col-xs-3">
+                        <label for="bod">Fødselsdag</label>
+                    </div>
+                    <div class="col-xs-9">
+                        <input id="bod" type="date" class="form-control" required/>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="text" class="form-control" placeholder="Addresse" required/>
+                </div>
+                <div class="field row">
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="Postnr" pattern="\d{4}" required/>
+                    </div>
+                    <div class="col-sm-8 city">
+                        <input type="text" class="form-control" placeholder="Sted" required/>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="tel" class="form-control" placeholder="Telefonnummer" required/>
+                </div>
+                <div class="field">
+                    <input type="email" class="form-control" placeholder="Epost" required/>
+                </div>
+
+                <div class="field info">
+                    <p>
+                        <small>
+                            Vi har en <strong>årskontigent på kr 50,-</strong>. Ved å melde deg inn, godtar du å betale
+                            dette. Du vil få betalingsinformasjon på neste side (og på e-post), og kan begynne å delta med
+                            en eneste gang. Det høres ut som en god deal, eller hva?
+                        </small>
+                    </p>
+                </div>
+
+                <div class="field sign-up row">
+                    <div class="btn-container col-sm-3">
+                        <a href="#" class="btn btn-success btn-lg btn-block">Meld deg inn!</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+
+    <div class="container-fluid footer-wrap">
+        <div class="container">
+            <footer id="main-footer" class="row">
+                <section class="col-sm-4 list contact-info">
+                    <h2>Smash Norge</h2>
+                    <ul>
+                        <li>Org. nr. xxx xxx xxx</li>
+                        <li>post@smashnorge.no</li>
+                        <li>Medlem av hyperion.</li>
+                    </ul>
+                </section>
+                <section class="col-sm-4 list social-media hidden-xs">
+                    <ul class="row no-header">
+                        <li class="col-xs-6"><a href="https://www.facebook.com/SmashNorge"><img
+                                src="/assets/img/facebook-icon-white.png" alt="facebook"/></a></li>
+                        <li class="col-xs-6"><a href="https://twitter.com/SmashNorge"><img
+                                src="/assets/img/twitter-icon-white.png"
+                                alt="twitter"/></a></li>
+                    </ul>
+                </section>
+                <section class="col-sm-4 list links hidden-xs">
+                    <h2>Lær mer</h2>
+                    <ul>
+                        <li><a href="#">En link</a></li>
+                        <li><a href="#">Enda en link</a></li>
+                        <li><a href="https://www.github.com/selbekk/smashnorge">Github</a></li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+    </div>
 
 
-<script src="/assets/vendor.min.js"></script>
-<script src="/assets/scripts.min.js"></script>
+    <script src="/assets/vendor.min.js"></script>
+    <script src="/assets/scripts.min.js"></script>
 </body>
 </html>
