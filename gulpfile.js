@@ -109,8 +109,9 @@ gulp.task('wordpress', ['wordpress:theme'], function () {
 
 // Watch for updates in files to recompile assets
 gulp.task('watch', function () {
-    gulp.watch('js/*.js', ['script']);
-    gulp.watch('css/*.css', ['style']);
+    gulp.watch('src/*.html', ['html']);
+    gulp.watch('src/js/*.js', ['script']);
+    gulp.watch('src/css/*.css', ['style']);
     gulp.watch('bower.json', ['bower']);
 });
 
