@@ -9,7 +9,7 @@ var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
-var wiredep = require('wiredep').stream;
+var wiredep = require('wiredep');
 var changed = require('gulp-changed');
 var fs = require('fs');
 
@@ -57,11 +57,7 @@ gulp.task('style', function () {
 gulp.task('bower', ['bower:wire', 'bower:copy']);
 
 gulp.task('bower:wire', function () {
-    return gulp.src('*.html')
-        .pipe(wiredep({
-            // todo: prepend a / to path
-        }))
-        .pipe(gulp.dest('dist'));
+    wiredep({src: './*.html', dest: '/*.html'});
 });
 
 gulp.task('images', function () {
