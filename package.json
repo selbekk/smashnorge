@@ -30,7 +30,5 @@
     "gulp-server-livereload": "^1.0.2",
     "gulp-uglify": "^1.1.0"
   },
-  "dependencies": {
-    "wiredep": "^2.2.2"
-  }
+  "dependencies": {}
 }

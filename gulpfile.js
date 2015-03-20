@@ -9,7 +9,6 @@ var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
-var wiredep = require('wiredep');
 var changed = require('gulp-changed');
 var fs = require('fs');
 
