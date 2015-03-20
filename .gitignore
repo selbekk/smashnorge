@@ -20,7 +20,14 @@ wp-content/wp-cache-config.php
 # OS X
 .DS_Store
 
-# Dependencies
-node_modules/
+# Run "npm install" to install node_modules
+node_modules/ 
+
+# Run "bower install" to install bower_components
 bower_components/
+
+# Run "gulp compile" to install the local webapp build
 dist/
+
+# Run "gulp wordpress:theme" to install compiled assets
+theme/assets/
