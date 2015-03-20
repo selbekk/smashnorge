@@ -17,7 +17,7 @@ const WORDPRESS_THEME = 'smash-norge';
 
 // Clean build folder
 gulp.task('clean', function(cb) {
-    del(['dist/assets/scripts.min.js', 'dist/assets/vendor.min.js', 'dist/assets/styles.min.css'], cb);
+    del(['dist/assets/scripts.min.js', 'dist/assets/styles.min.css'], cb);
 });
 
 // Handle frontend JS build
@@ -47,14 +47,14 @@ gulp.task('bower', ['bower:css', 'bower:js'], function() {
 });
 
 gulp.task('bower:js', ['clean'], function () {
-    return gulp.src('bower_components/**.min.js')
+    return gulp.src('bower_components/**/*.min.js')
         .pipe(changed('vendor.min.js'))
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest('dist/assets/'));
 });
 
 gulp.task('bower:css', ['clean'], function () {
-    return gulp.src('bower_components/**.min.css')
+    return gulp.src('bower_components/**/*.min.css')
         .pipe(changed('vendor.min.css'))
         .pipe(concat('vendor.min.css'))
         .pipe(gulp.dest('dist/assets/'));
