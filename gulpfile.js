@@ -42,7 +42,7 @@ gulp.task('style', ['clean'], function () {
 });
 
 // Bower tasks
-gulp.task('bower', ['bower:css', 'bower:js'], function() {
+gulp.task('bower', ['bower:css', 'bower:js', 'bower:fonts'], function() {
     console.log('bower tasks completed');
 });
 
@@ -58,6 +58,12 @@ gulp.task('bower:css', ['clean'], function () {
         .pipe(changed('vendor.min.css'))
         .pipe(concat('vendor.min.css'))
         .pipe(gulp.dest('dist/assets/'));
+});
+
+gulp.task('bower:fonts', ['clean'], function () {
+    return gulp.src(['bower_components/bootstrap/dist/fonts/*'])
+        .pipe(changed('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('images', function () {
