@@ -23,5 +23,4 @@ wp-content/wp-cache-config.php
 # Dependencies
 node_modules/
 bower_components/
-assets/
 dist/
