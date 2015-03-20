@@ -5,9 +5,7 @@
     <title>Smash Norge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- bower:css -->
-    <!-- endbower -->
-
+    <link rel="stylesheet" href="/assets/vendor.min.css"/>
     <link rel="stylesheet" href="/assets/styles.min.css"/>
 </head>
 <body>
@@ -28,16 +26,17 @@
                 <div class="row">
                     <div class="col-sm-1 hidden-xs">
                         <a href="/">
-                            <img src="/img/small-logo-transparent-full.png" alt="Smash Norge logo" class="nav-logo"/>
+                            <img src="/assets/img/small-logo-transparent-full.png" alt="Smash Norge logo"
+                                 class="nav-logo"/>
                         </a>
                     </div>
                     <div class="col-sm-11">
                         <ul class="nav nav-pills nav-justified">
                             <li><a href="/news.html" title="">Nyheter</a></li>
-                            <li><a href="/signup.html" title="">Bli medlem</a></li>
+                            <li class="active"><a href="/signup.html" title="">Bli medlem</a></li>
                             <li><a href="/tournaments.html" title="">Turneringer</a></li>
                             <li><a href="/ranking.html" title="">Ranking</a></li>
-                            <li class="active"><a href="/about-us.html" title="">Om oss</a></li>
+                            <li><a href="/about-us.html" title="">Om oss</a></li>
                             <li><a href="/contact-us.html" title="">Kontakt oss</a></li>
                             <li class="search-trigger"><a href="#" title="Søk"><span
                                     class="glyphicon glyphicon-search hidden-xs"></span></a></li>
@@ -49,46 +48,77 @@
 
         <div class="container">
             <header id="main-header">
-                <h1 class="hidden-xs">Kontakt oss</h1>
+                <h1 class="hidden-xs">Bli medlem</h1>
             </header>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <p class="lead lead-main col-md-9">
-            Har du noen spørsmål du ikke fant svar på? Vil du ta kontakt med oss før du lar barnet ditt melde seg inn?
-            Ikke noe problem. Her kan du skrive noen ord til oss, så svarer vi så raskt vi kan.
+    <div class="signup-intro">
+        <p class="lead lead-main">
+            <strong>Så kult at du vil være med!</strong> Som medlem får du egentlig bare fordeler. Vi holder
+            mange turneringer, har en veldig aktiv Facebook-side og ikke minst et fantastisk community! For å kunne være
+            med trenger vi å vite litt mer om deg, så gjør deg klar til å fylle ut et lite skjema.
         </p>
     </div>
-</div>
-
-<div class="container">
-    <div class="contact-form row">
+    <div class="signup-form row">
         <form class="col-md-8">
             <div class="field">
-                <input type="text" class="form-control" placeholder="Navnet ditt"/>
+                <input type="text" class="form-control" placeholder="Navnet ditt" required/>
+            </div>
+            <div class="field row">
+                <label class="choice">
+                    <input type="radio" name="sex" class="form-control"/> Bro
+                </label>
+                <label class="choice">
+                    <input type="radio" name="sex" class="form-control"/> Broette
+                </label>
+            </div>
+            <div class="field bod row">
+                <div class="col-xs-3">
+                    <label for="bod">Fødselsdag</label>
+                </div>
+                <div class="col-xs-9">
+                    <input id="bod" type="date" class="form-control" required/>
+                </div>
+            </div>
+            <div class="field">
+                <input type="text" class="form-control" placeholder="Addresse" required/>
+            </div>
+            <div class="field row">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Postnr" pattern="\d{4}" required/>
+                </div>
+                <div class="col-sm-8 city">
+                    <input type="text" class="form-control" placeholder="Sted" required/>
+                </div>
+            </div>
+            <div class="field">
+                <input type="tel" class="form-control" placeholder="Telefonnummer" required/>
             </div>
             <div class="field">
                 <input type="email" class="form-control" placeholder="Epost" required/>
             </div>
 
-            <div class="field">
-                <textarea class="form-control" rows="5" placeholder="Hva er det du lurer på?" required></textarea>
+            <div class="field info">
+                <p>
+                    <small>
+                        Vi har en <strong>årskontigent på kr 50,-</strong>. Ved å melde deg inn, godtar du å betale
+                        dette. Du vil få betalingsinformasjon på neste side (og på e-post), og kan begynne å delta med
+                        en eneste gang. Det høres ut som en god deal, eller hva?
+                    </small>
+                </p>
             </div>
 
             <div class="field sign-up row">
                 <div class="btn-container col-sm-3">
-                    <a href="#" class="btn btn-success btn-lg btn-block">Send i vei!</a>
+                    <a href="#" class="btn btn-success btn-lg btn-block">Meld deg inn!</a>
                 </div>
             </div>
         </form>
     </div>
 </div>
-
-<!-- TODO: Create display for tournaments -->
-
 
 <div class="container-fluid footer-wrap">
     <div class="container">
@@ -104,9 +134,9 @@
             <section class="col-sm-4 list social-media hidden-xs">
                 <ul class="row no-header">
                     <li class="col-xs-6"><a href="https://www.facebook.com/SmashNorge"><img
-                            src="/img/facebook-icon-white.png" alt="facebook"/></a></li>
+                            src="/assets/img/facebook-icon-white.png" alt="facebook"/></a></li>
                     <li class="col-xs-6"><a href="https://twitter.com/SmashNorge"><img
-                            src="/img/twitter-icon-white.png"
+                            src="/assets/img/twitter-icon-white.png"
                             alt="twitter"/></a></li>
                 </ul>
             </section>
@@ -123,8 +153,7 @@
 </div>
 
 
-<!-- bower:js -->
-<!-- endbower -->
+<script src="/assets/vendor.min.js"></script>
 <script src="/assets/scripts.min.js"></script>
 </body>
 </html>

@@ -1,27 +1,20 @@
 # Wordpress
-*.log
-.htaccess
-sitemap.xml
-sitemap.xml.gz
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/wp-cache-config.php
+wordpress/
 
 # IntelliJ
 .idea/
-*.iml
 
 # OS X
 .DS_Store
 
-# Dependencies
-node_modules/
+# Run "npm install" to install node_modules
+node_modules/ 
+
+# Run "bower install" to install bower_components
 bower_components/
-assets/
+
+# Run "gulp compile" to install the local webapp build
 dist/
+
+# Run "gulp wordpress:theme" to install compiled assets
+theme/assets/

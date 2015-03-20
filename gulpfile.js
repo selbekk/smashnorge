@@ -9,31 +9,20 @@ var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
-var wiredep = require('wiredep').stream;
 var changed = require('gulp-changed');
 var fs = require('fs');
 
+// constants goes here
+const WORDPRESS_THEME = 'smash-norge';
+
 // Clean build folder
-gulp.task('clean:img', function (cb) {
-    del(['dist/img/content/*', 'dist/img/*'], cb);
+gulp.task('clean', function(cb) {
+    del(['dist/assets/scripts.min.js', 'dist/assets/styles.min.css'], cb);
 });
-
-gulp.task('clean:html', function (cb) {
-    del(['dist/*.html'], cb);
-});
-
-gulp.task('clean:js', function (cb) {
-    del(['dist/*.js'], cb);
-});
-
-gulp.task('clean:css', function (cb) {
-    del(['dist/*.css'], cb);
-});
-
 
 // Handle frontend JS build
-gulp.task('script', function () {
-    return gulp.src('js/*.js')
+gulp.task('script', ['clean'], function () {
+    return gulp.src('src/js/*.js')
         .pipe(plumber())
         .pipe(jshint())
         .pipe(uglify())
@@ -43,8 +32,8 @@ gulp.task('script', function () {
 });
 
 // Handle CSS build
-gulp.task('style', function () {
-    return gulp.src('css/*.css')
+gulp.task('style', ['clean'], function () {
+    return gulp.src('src/css/*.css')
         .pipe(plumber())
         .pipe(cssPrefixed({browsers: ['last 2 versions'], cascade: false}))
         .pipe(minifyCss())
@@ -52,30 +41,46 @@ gulp.task('style', function () {
         .pipe(gulp.dest('dist/assets/'));
 });
 
-// Wire in bower dependencies
-gulp.task('bower:wire', function () {
-    gulp.src('*.html')
-        .pipe(wiredep({
-            // todo: prepend a / to path
-        }))
-        .pipe(gulp.dest('dist'));
+// Bower tasks
+gulp.task('bower', ['bower:css', 'bower:js', 'bower:fonts'], function() {
+    console.log('bower tasks completed');
 });
 
-gulp.task('bower:copy', function () {
-    gulp.src('bower_components/**')
-        .pipe(changed('dist/bower_components'))
-        .pipe(gulp.dest('dist/bower_components'));
+gulp.task('bower:js', ['clean'], function () {
+    return gulp.src('bower_components/**/*.min.js')
+        .pipe(changed('vendor.min.js'))
+        .pipe(concat('vendor.min.js'))
+        .pipe(gulp.dest('dist/assets/'));
+});
+
+gulp.task('bower:css', ['clean'], function () {
+    return gulp.src('bower_components/**/*.min.css')
+        .pipe(changed('vendor.min.css'))
+        .pipe(concat('vendor.min.css'))
+        .pipe(gulp.dest('dist/assets/'));
+});
+
+gulp.task('bower:fonts', ['clean'], function () {
+    return gulp.src(['bower_components/bootstrap/dist/fonts/*'])
+        .pipe(changed('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('images', function () {
-    gulp.src('img/**')
-        .pipe(changed('dist/img'))
-        .pipe(gulp.dest('dist/img'));
+    return gulp.src('src/img/**')
+        .pipe(changed('dist/assets/img'))
+        .pipe(gulp.dest('dist/assets/img'));
+});
+
+gulp.task('html', function() {
+    return gulp.src('src/*.html')
+        .pipe(changed('dist/*.html'))
+        .pipe(gulp.dest('dist'));
 });
 
 // Development server @ localhost:8000
 gulp.task('server', function () {
-    gulp.src('dist')
+    return gulp.src('dist')
         .pipe(server({
             livereload: false,
             open: true,
@@ -93,21 +98,30 @@ gulp.task('prompt', function () {
     });
 });
 
-// Watch for updates in files to recompile assets
-gulp.task('watch', function () {
-    gulp.watch('js/*.js', ['script']);
-    gulp.watch('css/*.css', ['style']);
-    gulp.watch('bower.json', ['bower']);
-    gulp.watch('*.html', ['bower:wire']);
-    gulp.watch('bower.json', ['bower:copy']);
+// Wordpress tasks
+gulp.task('wordpress:theme', ['compile'], function() {
+    var outputPath = 'theme/assets';
+    return gulp.src('dist/assets/**')
+        .pipe(changed(outputPath))
+        .pipe(gulp.dest(outputPath));
 });
 
-gulp.task('bower', ['bower:wire', 'bower:copy']);
-gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
-gulp.task('build', ['clean', 'script', 'style', 'bower', 'images']);
-gulp.task('serve', ['build', 'watch', 'server']);
-gulp.task('default', ['build']);
+gulp.task('wordpress', ['wordpress:theme'], function () {
+    var outputPath = 'wordpress/wp-content/themes/' + WORDPRESS_THEME;
+    return gulp.src('theme/**')
+        .pipe(changed(outputPath))
+        .pipe(gulp.dest(outputPath));
+});
 
-/* 5up3r s3cr37 34573r366 */
+// Watch for updates in files to recompile assets
+gulp.task('watch', function () {
+    gulp.watch('src/*.html', ['html']);
+    gulp.watch('src/js/*.js', ['script']);
+    gulp.watch('src/css/*.css', ['style']);
+    gulp.watch('bower.json', ['bower']);
+});
 
+gulp.task('compile', ['html', 'script', 'style', 'bower', 'images']);
+gulp.task('serve', ['compile', 'watch', 'server']);
 gulp.task('smash', ['prompt', 'serve']);
+gulp.task('default', ['wordpress']);

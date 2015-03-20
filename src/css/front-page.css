@@ -3,7 +3,7 @@
 }
 
 .bg.bg-panorama {
-    background-image: url(../img/content/main-panorama.jpg);
+    background-image: url(../assets/img/content/main-panorama.jpg);
 }
 
 .btn-main-cta {
@@ -40,15 +40,15 @@
     }
 
     .actions .action .bg-tournaments {
-        background-image: url(../img/content/tournaments-action.jpg);
+        background-image: url(../assets/img/content/tournaments-action.jpg);
     }
 
     .actions .action .bg-ranking {
-        background-image: url(../img/content/ranking-action.jpg);
+        background-image: url(../assets/img/content/ranking-action.jpg);
     }
 
     .actions .action .bg-news {
-        background-image: url(../img/content/news-action.jpg);
+        background-image: url(../assets/img/content/news-action.jpg);
     }
 
     .actions .action a h2 {
