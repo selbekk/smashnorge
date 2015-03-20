@@ -17,9 +17,7 @@ var fs = require('fs');
 const WORDPRESS_THEME = 'smash-norge';
 
 // Clean build folder
-gulp.task('clean:img', function (cb) {
-    del(['dist/img/content/*', 'dist/img/*'], cb);
-});
+gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
 
 gulp.task('clean:html', function (cb) {
     del(['dist/*.html'], cb);
@@ -55,19 +53,15 @@ gulp.task('style', function () {
         .pipe(gulp.dest('dist/assets/'));
 });
 
-// Wire in bower dependencies
+// Bower tasks
+gulp.task('bower', ['bower:wire', 'bower:copy']);
+
 gulp.task('bower:wire', function () {
     return gulp.src('*.html')
         .pipe(wiredep({
             // todo: prepend a / to path
         }))
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('bower:copy', function () {
-    return gulp.src('bower_components/**')
-        .pipe(changed('dist/bower_components'))
-        .pipe(gulp.dest('dist/bower_components'));
 });
 
 gulp.task('images', function () {
@@ -102,9 +96,9 @@ gulp.task('wordpress:theme', ['build'], function() {
         .pipe(gulp.dest('theme/assets'));
 });
 
-gulp.task('wordpress:install', ['dist:assets-to-theme'], function() {
+gulp.task('wordpress', ['wordpress:theme'], function () {
     return gulp.src('theme/**')
-        .pipe(gulp.dest('wordpress/wp-content/themes'))
+        .pipe(gulp.dest('wordpress/wp-content/themes/' + WORDPRESS_THEME));
 });
 
 // Watch for updates in files to recompile assets
@@ -116,12 +110,7 @@ gulp.task('watch', function () {
     gulp.watch('bower.json', ['bower:copy']);
 });
 
-gulp.task('bower', ['bower:wire', 'bower:copy']);
-gulp.task('clean', ['clean:html', 'clean:js', 'clean:css']);
 gulp.task('build', ['clean', 'script', 'style', 'bower', 'images']);
 gulp.task('serve', ['build', 'watch', 'server']);
-gulp.task('default', ['build']);
-
-/* 5up3r s3cr37 34573r366 */
-
 gulp.task('smash', ['prompt', 'serve']);
+gulp.task('default', ['build']);
