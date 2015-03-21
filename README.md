@@ -15,7 +15,7 @@ features there.
 We're currently doing a lot of setup stuff, but we'll soon be ready to accept pull requests on changes and improvements.
 This is a totally voluntary project, so any help is greatly appreciated.
 
-## Initial setup
+## General setup
 
 This project is built with a nice new build tool called Gulp. It uses Node and NPM, so if you don't have it installed,
 head over to their [getting started guide](https://docs.npmjs.com/getting-started/installing-node).
@@ -29,9 +29,23 @@ Then install all dependencies with
     npm install # installs all build dependencies
     bower install # installs all frontend dependencies
 
-And we're done! To start a test server, simply run
+Now you can run the build for the first time:
 
-    gulp serve
+    gulp
 
-The website is currently being designed as a general website with a few different templates. Since we're going to make a
-Wordpress template out of this, we have quite a few template files to create before we start wordpressifying this
+## Wordpress setup
+
+If you want to start Wordpress locally, we've made it easy to get set up.
+
+First up, run the ``install.sh`` script in the ``scripts/`` folder.
+
+    cd scripts
+    ./install.sh
+
+It will guide you through downloading and installing wordpress locally, as well as setting up your local database with a
+ mirror of the production database (should be pretty recent).
+
+Once the script has finished running, return to the project root directory and serve the wordpress site:
+
+    gulp serve:wordpress
+
