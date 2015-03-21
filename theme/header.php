@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html  <?php language_attributes(); ?>>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Smash Norge</title>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php wp_title('|', true, 'right'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/vendor.min.css"/>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/styles.min.css" />
+    <?php wp_head(); ?>
 </head>
 <body class="front-page">
     <div class="mobile-content visible-xs">
@@ -17,7 +19,7 @@
         <div class="xs-trigger search-trigger">
             <span class="glyphicon glyphicon-search"></span>
         </div>
-        <h1 class="main-title">Smash Norge</h1>
+        <h1 class="main-title"><?php bloginfo('name'); ?></h1>
     </div>
     <div class="container-fluid header-wrap bg bg-cover bg-panorama">
 
@@ -31,15 +33,17 @@
                         </a>
                     </div>
                     <div class="col-sm-11">
-                        <ul class="nav nav-pills nav-justified">
-                            <li><a href="/news.html" title="">Nyheter</a></li>
-                            <li><a href="/signup.html" title="">Bli medlem</a></li>
-                            <li><a href="/tournaments.html" title="">Turneringer</a></li>
-                            <li><a href="/ranking.html" title="">Ranking</a></li>
-                            <li><a href="/about-us.html" title="">Om oss</a></li>
-                            <li><a href="/contact-us.html" title="">Kontakt oss</a></li>
-                            <li class="search-trigger"><a href="#" title="Søk"><span class="glyphicon glyphicon-search hidden-xs"></span></a></li>
-                        </ul>
+                        <?php
+
+                        $navOpts = array(
+                            'menu' => 'main-menu',
+                            'menu_class' => 'nav nav-pills nav-justified',
+                            'container' => '',
+                            'fallback_cb' => ''
+                        );
+                        wp_nav_menu($navOpts);
+
+                        ?>
                     </div>
                 </div>
             </div>

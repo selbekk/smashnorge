@@ -54,3 +54,9 @@ Once the script has finished running, return to the project root directory and s
 
     gulp serve:wordpress
 
+The is a test user in the database for you to test out
+
+	Username: admin
+	Password: testpass
+
+Best of luck!

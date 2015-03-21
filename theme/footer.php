@@ -33,5 +33,6 @@
 
     <script src="<?php bloginfo('template_directory'); ?>/assets/vendor.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/assets/scripts.min.js"></script>
+    <?php wp_footer(); ?>
 </body>
 </html>
