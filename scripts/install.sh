@@ -13,6 +13,21 @@ if [ -f ../wordpress/index.php ]; then
     exit 1; # Return error code 1 if wordpress is already installed
 fi
 
+# Go ahead and download the latest version of wordpress
 
+echo "Downloading Wordpress. This might take some time, depending on your internet connection";
+curl --silent --output tmp/wordpress.tar.gz https://wordpress.org/latest.tar.gz
+echo "Download complete";
 
+# Unzip the content to the wordpress-folder
+
+# Create wp-config
+
+# Set up database
+
+# Finally, let's remove the tmp folder
+rm -rf tmp/;
+
+# And we're done!
+exit 0;
 
