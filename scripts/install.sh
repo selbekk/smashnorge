@@ -15,9 +15,9 @@ fi
 
 # Go ahead and download the latest version of wordpress
 
-echo "Downloading Wordpress. This might take some time, depending on your internet connection";
-curl --silent --output tmp/wordpress.tar.gz https://wordpress.org/latest.tar.gz
-echo "Download complete";
+echo "Downloading Wordpress. This might take some time, depending on your internet connection\n";
+curl --output tmp/wordpress.tar.gz https://wordpress.org/latest.tar.gz
+echo "\nDownload complete";
 
 # Unzip the content to the wordpress-folder
 
