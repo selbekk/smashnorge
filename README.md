@@ -37,6 +37,11 @@ Now you can run the build for the first time:
 
 If you want to start Wordpress locally, we've made it easy to get set up.
 
+> ### Note
+> Wordpress requires Mysql to run. Make sure you have your mysql server up and running.
+> If you don't have ``mysql`` installed, you can install it with ``brew install mysql``.
+> Start the server with ``mysql.server start``
+
 First up, run the ``install.sh`` script in the ``scripts/`` folder.
 
     cd scripts
