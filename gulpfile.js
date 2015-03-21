@@ -118,10 +118,12 @@ gulp.task('watch', function () {
     gulp.watch('src/*.html', ['html']);
     gulp.watch('src/js/*.js', ['script']);
     gulp.watch('src/css/*.css', ['style']);
+    gulp.watch('theme/', ['wordpress']);
     gulp.watch('bower.json', ['bower']);
 });
 
 gulp.task('compile', ['html', 'script', 'style', 'bower', 'images']);
-gulp.task('serve', ['compile', 'watch', 'server']);
+gulp.task('serve:local', ['compile', 'watch', 'server']);
+gulp.task('serve:wordpress', ['wordpress', 'watch']);
 gulp.task('smash', ['prompt', 'serve']);
-gulp.task('default', ['wordpress']);
+gulp.task('default', ['wordpress', 'watch']);
