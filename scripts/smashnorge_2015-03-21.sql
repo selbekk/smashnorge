@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.22)
 # Database: smashnorge
-# Generation Time: 2015-03-21 09:55:20 +0000
+# Generation Time: 2015-03-21 10:06:47 +0000
 # ************************************************************
 
 
@@ -161,8 +161,8 @@ VALUES
 	(38,'gmt_offset','0','yes'),
 	(39,'default_email_category','1','yes'),
 	(40,'recently_edited','','no'),
-	(41,'template','twentyfifteen','yes'),
-	(42,'stylesheet','twentyfifteen','yes'),
+	(41,'template','smash-norge','yes'),
+	(42,'stylesheet','smash-norge','yes'),
 	(43,'comment_whitelist','1','yes'),
 	(44,'blacklist_keys','','no'),
 	(45,'comment_registration','0','yes'),
@@ -216,7 +216,7 @@ VALUES
 	(93,'widget_recent-comments','a:2:{i:2;a:2:{s:5:\"title\";s:0:\"\";s:6:\"number\";i:5;}s:12:\"_multiwidget\";i:1;}','yes'),
 	(94,'widget_archives','a:2:{i:2;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}','yes'),
 	(95,'widget_meta','a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}','yes'),
-	(96,'sidebars_widgets','a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:13:\"array_version\";i:3;}','yes'),
+	(96,'sidebars_widgets','a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:18:\"orphaned_widgets_1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:13:\"array_version\";i:3;}','yes'),
 	(97,'cron','a:4:{i:1426962300;a:1:{s:20:\"wp_maybe_auto_update\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1426974746;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1427017959;a:1:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes'),
 	(99,'_transient_random_seed','63d89e65709c8f6e2ec75b64d57dff93','yes'),
 	(103,'_site_transient_timeout_theme_roots','1426933354','yes'),
@@ -245,7 +245,11 @@ VALUES
 	(126,'_transient_plugin_slugs','a:2:{i:0;s:19:\"akismet/akismet.php\";i:1;s:9:\"hello.php\";}','no'),
 	(127,'_transient_timeout_dash_4077549d03da2e451c8b5f002294ff51','1426974765','no'),
 	(128,'_transient_dash_4077549d03da2e451c8b5f002294ff51','<div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2015/03/wordpress-4-2-beta-2/\'>WordPress 4.2 Beta 2</a> <span class=\"rss-date\">19. mars 2015</span><div class=\"rssSummary\">WordPress 4.2 Beta 2 is now available! This software is still in development, so we don’t recommend you run it on a production site. Consider setting up a test site just to play with the new version. To test WordPress 4.2, try the WordPress Beta Tester plugin (you’ll want “bleeding edge nightlies”). Or you can [&hellip;]</div></li></ul></div><div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'http://wptavern.com/wordcamp-london-2015-contributor-day-in-photos\'>WPTavern: WordCamp London 2015 Contributor Day in Photos</a></li><li><a class=\'rsswidget\' href=\'http://wptavern.com/slack-releases-standalone-app-for-windows\'>WPTavern: Slack Releases Standalone App For Windows</a></li><li><a class=\'rsswidget\' href=\'http://ma.tt/2015/03/typewriter/\'>Matt: The Billionaire’s Typewriter</a></li></ul></div><div class=\"rss-widget\"><ul><li class=\'dashboard-news-plugin\'><span>Populær utvidelse:</span> <a href=\'https://wordpress.org/plugins/ninja-forms/\' class=\'dashboard-news-plugin-link\'>Ninja Forms</a>&nbsp;<span>(<a href=\'plugin-install.php?tab=plugin-information&amp;plugin=ninja-forms&amp;_wpnonce=feac73a0a3&amp;TB_iframe=true&amp;width=600&amp;height=800\' class=\'thickbox\' title=\'Ninja Forms\'>Installer</a>)</span></li></ul></div>','no'),
-	(129,'can_compress_scripts','1','yes');
+	(129,'can_compress_scripts','1','yes'),
+	(130,'theme_mods_twentyfifteen','a:1:{s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1426932321;s:4:\"data\";a:2:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}}}}','yes'),
+	(131,'current_theme','Smash Norge','yes'),
+	(132,'theme_mods_smash-norge','a:1:{i:0;b:0;}','yes'),
+	(133,'theme_switched','','yes');
 
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
