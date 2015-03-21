@@ -123,7 +123,7 @@ gulp.task('watch', function () {
     gulp.watch('src/*.html', ['html']);
     gulp.watch('src/js/*.js', ['script']);
     gulp.watch('src/css/*.css', ['style']);
-    gulp.watch('theme/', ['wordpress']);
+    gulp.watch('theme/*.php', ['wordpress']);
     gulp.watch('bower.json', ['bower']);
 });
 
