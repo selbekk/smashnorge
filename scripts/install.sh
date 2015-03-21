@@ -52,7 +52,7 @@ Now we're going to create a wp-config.php file for you, with this info in it."
 
 cp ../wordpress/wp-config-sample.php ../wordpress/wp-config.php
 
-perl -pi -e "s/database_name_here/super-smash/g" ../wordpress/wp-config.php
+perl -pi -e "s/database_name_here/smashnorge/g" ../wordpress/wp-config.php
 perl -pi -e "s/username_here/$DB_USERNAME/g" ../wordpress/wp-config.php
 perl -pi -e "s/password_here/$DB_PASSWORD/g" ../wordpress/wp-config.php
 rm ../wordpress/wp-config-sample.php
@@ -60,15 +60,17 @@ echo -e "That went smooth!"
 
 # Set up database
 echo -e "Next up we're populating your database";
-mysql -p -e "CREATE DATABASE IF NOT EXISTS \`super-smash\`;"
-mysql "super-smash" < db/smashnorge_2015-03-21.sql
+mysql -p -e "CREATE DATABASE IF NOT EXISTS smashnorge;"
+mysql smashnorge < db/smashnorge_2015-03-21.sql
 
 # Finally, let's remove the tmp folder
 rm -rf tmp/;
 
 # And we're done!
-echo "
-We're done! Start your installation with gulp serve:wordpress. "
+echo -e "
+We're done! Start your installation with gulp serve:wordpress.
+If something is not right with your database connection, check
+the generated wp-config.php file";
 
 exit 0;
 
