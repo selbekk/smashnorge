@@ -11,6 +11,7 @@ var cssPrefixed = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var changed = require('gulp-changed');
 var fs = require('fs');
+var phpServer = require('gulp-connect-php');
 
 // constants goes here
 const WORDPRESS_THEME = 'smash-norge';
@@ -124,6 +125,8 @@ gulp.task('watch', function () {
 
 gulp.task('compile', ['html', 'script', 'style', 'bower', 'images']);
 gulp.task('serve:local', ['compile', 'watch', 'server']);
-gulp.task('serve:wordpress', ['wordpress', 'watch']);
+gulp.task('serve:wordpress', ['wordpress', 'watch'], function() {
+    phpServer.server({port: 8000, base: 'wordpress', open: true});
+});
 gulp.task('smash', ['prompt', 'serve']);
 gulp.task('default', ['wordpress', 'watch']);
