@@ -45,7 +45,7 @@ Here we need some help from you, since you need to specify some database credent
 
 First - your database username (can be blank): ";
 read DB_USERNAME
-echo "Nice, $DB_USERNAME it is.
+echo "Nice, \"$DB_USERNAME\" it is.
 Next up, your database password (can also be blank): "
 read DB_PASSWORD
 echo "Got it. And we're just going to assume that the host is localhost, because reasons.
@@ -59,7 +59,6 @@ perl -pi -e "s/username_here/$DB_USERNAME/g" ../wordpress/wp-config.php
 perl -pi -e "s/password_here/$DB_PASSWORD/g" ../wordpress/wp-config.php
 perl -pi -e "s/localhost/127.0.0.1/g" ../wordpress/wp-config.php
 rm ../wordpress/wp-config-sample.php
-echo "That went smooth!"
 
 # Set up database
 echo "Next up we're populating your database";
