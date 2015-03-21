@@ -4,13 +4,14 @@
         <section id="main-content" class="row">
             <article class="row cta-wrap">
                 <div class="col-md-9">
-                    <h1>Vi digger Melee!</h1>
-                    <p class="lead">
-
-                        Og det håper vi du også gjør. Her finner du Norges største Smash-community, i tillegg til
-                        oversikten over kommende turneringer, oppdaterte rankinglister og Norges desidert beste blogg
-                        innen Super Smash Bros. Melee.
-                    </p>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class="page-content">
+                            <?php the_content(); ?>
+                        </div>
+                    <?php endwhile;
+                    else : ?>
+                        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                    <?php endif; ?>
                     <a href="/src/signup.html" class="btn btn-main-cta">Bli med!</a>
                 </div>
             </article>
