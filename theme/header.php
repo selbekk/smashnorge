@@ -48,7 +48,7 @@
         <div class="container">
             <header id="main-header" class="row">
                 <div class="col-sm-3">
-                    <img src="<?php bloginfo('template-directory'); ?>/assets/img/logo-transparent.png" alt="Smash Norge logo" class="logo small hidden-xs"/>
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-transparent.png" alt="Smash Norge logo" class="logo small hidden-xs"/>
                 </div>
             </header>
         </div>
