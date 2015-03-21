@@ -18,3 +18,4 @@ dist/
 
 # Run "gulp wordpress:theme" to install compiled assets
 theme/assets/
+theme/fonts/

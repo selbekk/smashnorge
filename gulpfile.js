@@ -101,10 +101,14 @@ gulp.task('prompt', function () {
 
 // Wordpress tasks
 gulp.task('wordpress:theme', ['compile'], function() {
-    var outputPath = 'theme/assets';
-    return gulp.src('dist/assets/**')
-        .pipe(changed(outputPath))
-        .pipe(gulp.dest(outputPath));
+    var assetsOutputPath = 'theme/assets';
+    gulp.src('dist/assets/**')
+        .pipe(changed(assetsOutputPath))
+        .pipe(gulp.dest(assetsOutputPath));
+    var fontsOutputPath = 'theme/fonts';
+    gulp.src('dist/fonts/**')
+        .pipe(changed(fontsOutputPath))
+        .pipe(gulp.dest(fontsOutputPath));
 });
 
 gulp.task('wordpress', ['wordpress:theme'], function () {
@@ -129,4 +133,4 @@ gulp.task('serve:wordpress', ['wordpress', 'watch'], function() {
     phpServer.server({port: 8000, base: 'wordpress', open: true});
 });
 gulp.task('smash', ['prompt', 'serve']);
-gulp.task('default', ['wordpress', 'watch']);
+gulp.task('default', ['wordpress']);
