@@ -14,9 +14,9 @@
                 <section class="col-sm-4 list social-media hidden-xs">
                     <ul class="row no-header">
                         <li class="col-xs-6"><a href="https://www.facebook.com/SmashNorge"><img
-                                    src="/assets/img/facebook-icon-white.png" alt="facebook"/></a></li>
+                                    src="<?php bloginfo('template_directory'); ?>/assets/img/facebook-icon-white.png" alt="facebook"/></a></li>
                         <li class="col-xs-6"><a href="https://twitter.com/SmashNorge"><img
-                                    src="/assets/img/twitter-icon-white.png" alt="twitter"/></a></li>
+                                    src="<?php bloginfo('template_directory'); ?>/assets/img/twitter-icon-white.png" alt="twitter"/></a></li>
                     </ul>
                 </section>
                 <section class="col-sm-4 list links hidden-xs">
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <script src="/assets/vendor.min.js"></script>
-    <script src="/assets/scripts.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/assets/vendor.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/assets/scripts.min.js"></script>
 </body>
 </html>

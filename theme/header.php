@@ -5,8 +5,8 @@
     <title>Smash Norge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" href="/assets/vendor.min.css"/>
-    <link rel="stylesheet" href="/assets/styles.min.css" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/vendor.min.css"/>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/styles.min.css" />
 </head>
 <body class="front-page">
     <div class="mobile-content visible-xs">
@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-sm-1 hidden-xs">
                         <a href="/">
-                            <img src="/assets/img/small-logo-transparent-full.png" alt="Smash Norge logo"
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/small-logo-transparent-full.png" alt="Smash Norge logo"
                                  class="nav-logo"/>
                         </a>
                     </div>
@@ -48,7 +48,7 @@
         <div class="container">
             <header id="main-header" class="row">
                 <div class="col-sm-3">
-                    <img src="/assets/img/logo-transparent.png" alt="Smash Norge logo" class="logo small hidden-xs"/>
+                    <img src="<?php bloginfo('template-directory'); ?>/assets/img/logo-transparent.png" alt="Smash Norge logo" class="logo small hidden-xs"/>
                 </div>
             </header>
         </div>
