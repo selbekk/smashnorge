@@ -62,7 +62,7 @@ rm ../wordpress/wp-config-sample.php
 
 # Set up database
 echo "Next up we're populating your database";
-mysql -p -e "CREATE DATABASE IF NOT EXISTS smashnorge;"
+mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS smashnorge;"
 mysql -u $DB_USERNAME -p $DB_PASSWORD smashnorge < db/smashnorge.sql
 
 # Finally, let's remove the tmp folder
