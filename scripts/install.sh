@@ -39,18 +39,20 @@ echo "Unzipping wordpress installation into wordpress/ folder"
 tar -xzf tmp/wordpress.tar.gz -C ../
 echo "...and now that's done too!";
 
+# Set up database
+echo "Next up we're populating your database.
+
+For this we need your mysql root password.";
+mysql -u root -p -e "
+CREATE DATABASE IF NOT EXISTS smashnorge;
+CREATE USER 'smashuser' IDENTIFIED BY 'smashpass';
+GRANT ALL PRIVILEGES ON smashnorge.* TO 'smashuser'@'localhost' WITH GRANT OPTION;"
+echo "> created user and database";
+mysql -u smashuser smashnorge < db/smashnorge.sql
+echo "> database is populated";
+
 # Create wp-config
-echo "Next up is creating a wp-config.
-Here we need some help from you, since you need to specify some database credentials.
-
-First - your database username (can be blank): ";
-read DB_USERNAME
-echo "Nice, \"$DB_USERNAME\" it is.
-Next up, your database password (can also be blank): "
-read DB_PASSWORD
-echo "Got it. And we're just going to assume that the host is localhost, because reasons.
-
-Now we're going to create a wp-config.php file for you, with this info in it."
+echo "Next up is creating a wp-config.";
 
 cp ../wordpress/wp-config-sample.php ../wordpress/wp-config.php
 
@@ -59,13 +61,6 @@ perl -pi -e "s/username_here/$DB_USERNAME/g" ../wordpress/wp-config.php
 perl -pi -e "s/password_here/$DB_PASSWORD/g" ../wordpress/wp-config.php
 perl -pi -e "s/localhost/127.0.0.1/g" ../wordpress/wp-config.php
 rm ../wordpress/wp-config-sample.php
-
-# Set up database
-echo "Next up we're populating your database. 
-
-For this we need your mysql root password. This might be different than the password you just entered.";
-mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS smashnorge;"
-mysql -u $DB_USERNAME -p $DB_PASSWORD smashnorge < db/smashnorge.sql
 
 # Finally, let's remove the tmp folder
 rm -rf tmp/;
@@ -77,4 +72,3 @@ If something is not right with your database connection, check
 the generated wp-config.php file";
 
 exit 0;
-
