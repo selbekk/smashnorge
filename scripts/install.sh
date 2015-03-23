@@ -61,7 +61,9 @@ perl -pi -e "s/localhost/127.0.0.1/g" ../wordpress/wp-config.php
 rm ../wordpress/wp-config-sample.php
 
 # Set up database
-echo "Next up we're populating your database";
+echo "Next up we're populating your database. 
+
+For this we need your mysql root password. This might be different than the password you just entered.";
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS smashnorge;"
 mysql -u $DB_USERNAME -p $DB_PASSWORD smashnorge < db/smashnorge.sql
 
