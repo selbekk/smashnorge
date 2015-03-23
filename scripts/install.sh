@@ -57,8 +57,8 @@ echo "Next up is creating a wp-config.";
 cp ../wordpress/wp-config-sample.php ../wordpress/wp-config.php
 
 perl -pi -e "s/database_name_here/smashnorge/g" ../wordpress/wp-config.php
-perl -pi -e "s/username_here/$DB_USERNAME/g" ../wordpress/wp-config.php
-perl -pi -e "s/password_here/$DB_PASSWORD/g" ../wordpress/wp-config.php
+perl -pi -e "s/username_here/smashuser/g" ../wordpress/wp-config.php
+perl -pi -e "s/password_here/smashpass/g" ../wordpress/wp-config.php
 perl -pi -e "s/localhost/127.0.0.1/g" ../wordpress/wp-config.php
 rm ../wordpress/wp-config-sample.php
 
