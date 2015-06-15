@@ -11,7 +11,8 @@
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
 
-        
+                <h1>Test</h1>
+
     </div>
 
 <?php get_footer(); ?>

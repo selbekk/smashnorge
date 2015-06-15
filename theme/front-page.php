@@ -12,7 +12,7 @@
                     else : ?>
                         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
                     <?php endif; ?>
-                    <a href="/src/signup.html" class="btn btn-main-cta">Bli med!</a>
+                    <a href="index.php?page_id=17" class="btn btn-main-cta">Bli med!</a>
                 </div>
             </article>
         </section>
@@ -22,7 +22,7 @@
         <section class="container">
             <div class="row">
                 <div class="section news col-md-6">
-                    <a href="/src/single-article.html">
+                    <a href="/src/single-article.php">
                         <div class="featured-picture-wrap">
                             <div class="featured-picture" style="background-image: url(http://fillmurray.com/g/100/100)"></div>
                         </div>
@@ -33,7 +33,7 @@
                     </a>
                 </div>
                 <div class="section next-tournament col-md-6">
-                    <a href="/src/single-tournament.html" class="">
+                    <a href="/src/single-tournament.php" class="">
                         <div class="date">
                             <div class="day">21</div>
                             <div class="month">feb</div>
@@ -80,9 +80,9 @@
                         <li>
                             <h2>Vi er over 400 medlemmer!</h2>
                             <p>
-                                <strong>420 faktisk</strong>, ved siste telling. Det gjør oss til en av de største
+                                <strong>Over 500 faktisk</strong>, ved siste telling. Det gjør oss til en av de største
                                 Melee-klubbene i Europa! Om du har lyst til å bli kjent med en haug kule mennesker, kan
-                                du <a href="#">melde deg inn helt gratis!</a>
+                                du <a href="/signup">melde deg inn til en veldig snill medlemspris à 50 kr!</a>
                             </p>
                         </li>
                         <li>
