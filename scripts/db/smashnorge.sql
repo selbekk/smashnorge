@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.22, for osx10.10 (x86_64)
 --
--- Host: localhost    Database: smashnorge
+-- Host: localhost    Database: smashnorge_wordpress
 -- ------------------------------------------------------
 -- Server version	5.6.22
 
