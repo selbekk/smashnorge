@@ -8,7 +8,7 @@ wordpress/
 .DS_Store
 
 # Run "npm install" to install node_modules
-node_modules/ 
+node_modules/
 
 # Run "bower install" to install bower_components
 bower_components/

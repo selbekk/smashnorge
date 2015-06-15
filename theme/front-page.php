@@ -22,18 +22,18 @@
         <section class="container">
             <div class="row">
                 <div class="section news col-md-6">
-                    <a href="/src/single-article.php">
+                    <a href="#">
                         <div class="featured-picture-wrap">
                             <div class="featured-picture" style="background-image: url(http://fillmurray.com/g/100/100)"></div>
                         </div>
                         <div class="title">
-                            <p><strong class="lead-in">siste</strong> Vdogg tok hjem seiern i Smash-NM!</p>
+                            <p><strong class="lead-in">siste</strong> Flikkflakk rykker opp på Smashrankingen!</p>
                         </div>
                         <div class="clearfix"></div>
                     </a>
                 </div>
                 <div class="section next-tournament col-md-6">
-                    <a href="/src/single-tournament.php" class="">
+                    <a href="#" class="">
                         <div class="date">
                             <div class="day">21</div>
                             <div class="month">feb</div>
@@ -51,13 +51,13 @@
     <div class="container hidden-xs">
         <article class="row actions">
             <div class="col-sm-4 action">
-                <a href="#">
+                <a href="index.php?page_id=19">
                     <div class="bg bg-cover bg-circle bg-tournaments"></div>
                     <h2>Turneringer</h2>
                 </a>
             </div>
             <div class="col-sm-4 action">
-                <a href="#">
+                <a href="index.php?page_id=21">
                     <div class="bg bg-cover bg-circle bg-ranking"></div>
                     <h2>Ranking</h2>
                 </a>

@@ -8,7 +8,7 @@
                     <ul>
                         <li>Org. nr. xxx xxx xxx</li>
                         <li>post@smashnorge.no</li>
-                        <li>Medlem av hyperion.</li>
+                        <li>Medlem av hyperion</li>
                     </ul>
                 </section>
                 <section class="col-sm-4 list social-media hidden-xs">
