@@ -6,9 +6,10 @@
                 <section class="col-sm-4 list contact-info">
                     <h2>Smash Norge</h2>
                     <ul>
-                        <li>Org. nr. xxx xxx xxx</li>
-                        <li>post@smashnorge.no</li>
-                        <li>Medlem av hyperion</li>
+                        <li>Organisasjonsnummer 913778642 </li>
+                        <li>kontakt@smashnorge.no</li>
+                        <li>Medlem av <a href="http://n4f.no/">Hyperion</a></li>
+
                     </ul>
                 </section>
                 <section class="col-sm-4 list social-media hidden-xs">
@@ -22,8 +23,8 @@
                 <section class="col-sm-4 list links hidden-xs">
                     <h2>Lær mer</h2>
                     <ul>
-                        <li><a href="#">En link</a></li>
-                        <li><a href="#">Enda en link</a></li>
+                        <li><a href="https://www.youtube.com/user/SmashNorge">Sjekk ut vår Youtube-kanal</a></li>
+                        <li><a href="https://www.facebook.com/groups/meleenorway/">Bli med i Melee-klubben vår på Facebook</a></li>
                         <li><a href="https://www.github.com/selbekk/smashnorge">Github</a></li>
                     </ul>
                 </section>
