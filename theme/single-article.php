@@ -10,8 +10,6 @@
         else : ?>
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-
-        <p>Her kommer single articles</p>
     </div>
 
 <?php get_footer(); ?>
