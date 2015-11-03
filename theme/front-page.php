@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php
+query_posts('cat=1,3&showposts=3');
+?>
+
     <div class="container">
         <section id="main-content" class="row">
             <article class="row cta-wrap">
