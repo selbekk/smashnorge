@@ -86,7 +86,7 @@ query_posts('cat=1,3&showposts=3');
                             <p>
                                 <strong>Over 50 faktisk</strong>, ved siste telling. Det gjør oss til en av de største
                                 Melee-klubbene i Europa! Om du har lyst til å bli kjent med en haug kule mennesker, kan
-                                du <a href="/signup">melde deg inn til en veldig snill medlemspris à 50 kr!</a>
+                                du <a href="/bli-medlem/">melde deg inn til en veldig snill medlemspris à 50 kr!</a>
                             </p>
                         </li>
                         <li>
@@ -112,7 +112,7 @@ query_posts('cat=1,3&showposts=3');
                             <h2>Vi er entusiaster!</h2>
                             <p>
                                 <strong>Det fører til et trygt miljø!</strong> Smash Norge er ledet av profesjonelle
-                                spillere og entusiaster som jobber for å styrke Melee-miljøet i Norge. <a href="#">Les
+                                spillere og entusiaster som jobber for å styrke Melee-miljøet i Norge. <a href="om-oss/">Les
                                     mer om oss her!</a>
                             </p>
                         </li>
